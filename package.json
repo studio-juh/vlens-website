@@ -1,0 +1,15 @@
+{
+  "name": "vlens-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Vlens official website",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "check:browser": "node scripts/browser-check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
