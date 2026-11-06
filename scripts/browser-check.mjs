@@ -39,7 +39,7 @@ try {
   await call('Page.enable');
   await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
   await call('Page.navigate',{url:'http://127.0.0.1:'+server.address().port+'/'});
-  for(let i=0;i<200;i++){if(await evaluate("document.readyState==='complete' && !!document.querySelector('.studio')"))break;assert(i<199);await delay(20);}
+  for(let i=0;i<200;i++){if(await evaluate("document.readyState==='complete' && !!document.querySelector('.hero-shot')"))break;assert(i<199);await delay(20);}
   for(const [name,width,height] of [['desktop',1440,1100],['tablet',820,1000],['mobile',390,844],['small',320,750]]){
     await call('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false});
     await delay(100);
@@ -48,18 +48,18 @@ try {
     const capture=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:await evaluate('document.documentElement.scrollHeight'),scale:1}});
     fs.writeFileSync(path.join(output,name+'.png'),Buffer.from(capture.data,'base64'));
   }
-  for(const expression of ['smile','wink','talk','neutral']){
-    await evaluate("document.querySelector('.expression-controls [data-expression="+expression+"]').click()");
-    assert.equal(await evaluate("document.querySelector('.stage').dataset.expression"),expression);
-    assert.equal(await evaluate("document.querySelectorAll('.expression-controls [aria-pressed=true]').length"),1);
+  const screenshots = await evaluate("[...document.querySelectorAll('.screenshot img')].map(img=>({width:img.naturalWidth,height:img.naturalHeight,source:img.src,link:img.parentElement.href}))");
+  assert.equal(screenshots.length, 2);
+  for (const image of screenshots) {
+    assert(image.width > 0 && image.height > 0, 'Screenshot did not load');
+    assert.equal(image.link, image.source, 'Screenshot must link to the original image');
   }
   await evaluate("document.querySelector('summary').click()");
   assert(await evaluate("document.querySelector('details').open"),'FAQ did not open');
   await evaluate("document.querySelector('summary').click()");
   assert(!await evaluate("document.querySelector('details').open"),'FAQ did not close');
-  assert.equal(await evaluate("getComputedStyle(document.querySelector('.avatar-body')).animationName"),'none','Reduced motion ignored');
   assert.deepEqual(errors,[]);
-  console.log('PASS: 4 viewport widths, no overflow, loaded images, expressions, FAQ, reduced motion, no script errors.');
+  console.log('PASS: 4 viewport widths, no overflow, screenshots and original image links, FAQ, no script errors.');
   await call('Browser.close').catch(()=>{});await exited;
 }finally{
   socket?.close();

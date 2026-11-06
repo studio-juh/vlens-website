@@ -12,10 +12,11 @@ assert(!html.includes('getUserMedia'), 'The website must not request camera/micr
 const server = await startServer(0);
 try {
   const origin = 'http://127.0.0.1:' + server.address().port;
-  for (const asset of ['/', '/style.css', '/main.js', '/favicon.svg']) {
+  for (const asset of ['/', '/style.css', '/favicon.svg', '/screenshots/output-monitor.jpg', '/screenshots/psd-editor.jpg']) {
     const response = await fetch(origin + asset);
     assert.equal(response.status, 200, asset);
     assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
+    if (asset.endsWith('.jpg')) assert.equal(response.headers.get('content-type'), 'image/jpeg');
   }
   assert.equal((await fetch(origin + '/missing')).status, 404);
   console.log('PASS: internal anchors, local assets, public links, preview HTTP responses.');
