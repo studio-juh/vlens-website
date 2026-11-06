@@ -21,7 +21,7 @@ npm run dev
 - `dist/_headers` — 対応ホスト用のセキュリティヘッダー
 - `scripts/` — Node.js標準機能だけで動くプレビューと検証
 
-Cloudflare WorkersのStatic Assetsで `dist/` 内を公開します。Worker名は `vlens-website`、カスタムドメインは [vlens.studiojuh.com](https://vlens.studiojuh.com) です。設定は `wrangler.jsonc` にあり、公開時は `npx --yes wrangler@4.158.0 deploy` を実行します。
+Cloudflare WorkersのStatic Assetsで `dist/` 内を公開します。Worker名は `vlens-website`、カスタムドメインは [vlens.studiojuh.com](https://vlens.studiojuh.com) です。設定は `wrangler.jsonc` にあります。`main` にpushすると、Workers Buildsが `npm run check` を実行し、通過後に `npx --yes wrangler@4.158.0 deploy` で自動公開します。
 
 ## 公開内容の方針
 
