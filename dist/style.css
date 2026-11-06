@@ -68,6 +68,8 @@ summary { cursor: pointer; padding-block: 12px; }
 .download { padding: 26px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
 .download h2 { margin-bottom: 10px; font-size: 1.25rem; }
 .download p { margin: 0; font-size: .9rem; }
+.download-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 14px; }
+.release-notes { font-size: .9rem; text-decoration: underline; text-underline-offset: .2em; }
 .site-footer { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding-block: 35px; }
 .site-footer .brand { font-size: 1.05rem; }
 .site-footer small { color: var(--muted); }
