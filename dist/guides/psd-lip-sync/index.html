@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="PSDの立ち絵をマイクの声で口パクさせる方法。V Lensの内蔵サンプル、3段階とあいうえおの口形、目パチや表情のレイヤー割り当てを解説します。">
+  <link rel="canonical" href="https://vlens.studiojuh.com/guides/psd-lip-sync/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/guides/psd-lip-sync/">
+  <meta property="og:title" content="PSDで簡単リップシンク・目パチを設定する | V Lens">
+  <meta property="og:description" content="PSDの立ち絵をマイクの声で口パクさせる方法。V Lensの内蔵サンプル、3段階とあいうえおの口形、目パチや表情のレイヤー割り当てを解説します。">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/psd-editor.jpg">
+  <meta property="og:image:alt" content="V LensのPSD設定画面。レイヤー一覧とあいうえおの口形を表示">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PSDで簡単リップシンク・目パチを設定する | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <a class="header-link" href="/#download">ダウンロード</a>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <p class="guide-back"><a href="/#start">使い方一覧</a></p>
+    <h1>PSDで簡単リップシンク・目パチを設定する</h1>
+    <p class="guide-lead">PSDの立ち絵をマイクの声で口パクさせる方法。V Lensの内蔵サンプル、3段階とあいうえおの口形、目パチや表情のレイヤー割り当てを解説します。</p>
+    <figure class="screenshot guide-shot">
+      <a href="/screenshots/psd-editor.jpg"><img src="/screenshots/psd-editor.jpg" width="1052" height="830" alt="V LensのPSD設定画面。レイヤー一覧とあいうえおの口形を表示"></a>
+      <figcaption>内蔵PSDサンプルで「あ」の口形を確認している画面。</figcaption>
+    </figure>
+    <h2>まずは内蔵サンプルで口パクを試す</h2>
+    <ol>
+      <li>「ファイル」→「内蔵サンプル」→「簡単セットアップ（3段階）」を開きます。閉じ口・半開き・開き口と、自動目パチが設定済みです。</li>
+      <li>「音声・リップシンク」の入力を「マイク」にし、普段使うデバイスを選びます。</li>
+      <li>「出力を開始」を押して話します。出力モニターで口が開くタイミングを見ながら「口を開く音量」を調整します。</li>
+    </ol>
+    <h2>自分のPSDの立ち絵を動かす</h2>
+    <p>8 bit RGBのPSDを用意し、目や口の差分をレイヤーに分けます。「PSDを開く…」で読み込み、割り当て先の口形や目の状態を選んでから、対応するレイヤーを指定します。</p>
+    <p>閉じ口・半開き・開き口で動かすなら「3段階」、日本語の母音ごとに口形を変えるなら「あいうえお（母音推定）」を選びます。目開きと目閉じを割り当てると、自動目パチを設定できます。表情プリセットを作ると、笑顔なども配信中にショートカットで切り替えられます。</p>
+    <h2>口が動きにくいとき</h2>
+    <p>音声メーターで入力が届いているか確認します。小声やBGMの入った音声では「小声・BGMありボーカル」プリセットも試せます。声の母音を拾いにくい場合は「設定」→「母音推定を調整…」から、普段の声で「あ・い・う・え・お」を登録できます。</p>
+    <p>割り当てを別のPCに移すときは、「ファイル」→「PSD設定を保存…」でJSONに保存し、元のPSDファイルも一緒に移します。</p>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 id="related-title">関連ガイド</h2>
+      <ul class="guide-links">
+        <li><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔を動かす</a></li>
+        <li><a href="/guides/obs-virtual-camera/">OBSに仮想カメラや透過映像を追加</a></li>
+      </ul>
+      <a class="button" href="/#download">V Lensをダウンロード</a>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/">V Lens</a><small>© studio-juh</small></footer>
+</body>
+</html>

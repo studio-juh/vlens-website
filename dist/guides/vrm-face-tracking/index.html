@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。">
+  <link rel="canonical" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
+  <meta property="og:title" content="WebカメラでVRMの顔トラッキングを始める | V Lens">
+  <meta property="og:description" content="V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
+  <meta property="og:image:alt" content="V Lensの出力モニター">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>WebカメラでVRMの顔トラッキングを始める | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <a class="header-link" href="/#download">ダウンロード</a>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <p class="guide-back"><a href="/#start">使い方一覧</a></p>
+    <h1>WebカメラでVRMの顔トラッキングを始める</h1>
+    <p class="guide-lead">V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。</p>
+    <h2>VRMとWebカメラをつなぐ</h2>
+    <ol>
+      <li>「モデルを開く…」からVRM 0.xまたはVRM 1.0のファイルを読み込みます。</li>
+      <li>出力を停止した状態で「設定」→「カメラトラッキング…」を開き、使うWebカメラを選びます。「顔・身体をカメラに連動」をオンにします。</li>
+      <li>「プレビュー開始」を押して、正面を向いたまま「現在の向きを基準にする」を選びます。顔の向きとまばたきを確認し、設定を適用して出力を開始します。</li>
+    </ol>
+    <h2>顔の向き、視線、口パクを調整する</h2>
+    <p>VRMの顔の向きや目線、まばたきは、モデルが対応するボーンや表情に反映されます。鏡に映るように動かしたい場合は、カメラトラッキング設定の「動きの対応」で「鏡」を選びます。</p>
+    <p>口パクは「音声のみ」から「カメラのみ」まで5段階で配分できます。マイクで口を動かしながら、まばたきや頭の動きだけWebカメラで合わせることもできます。首と肩を一緒に動かしたい場合は「顔＋上半身の自然な連動」を選べます。</p>
+    <h2>顔を見つけられないとき</h2>
+    <p>顔全体がカメラの画角に入るように調整し、トラッキング設定でランドマークを確認します。確認画面は顔の点・線だけ、または強いモザイクを重ねた映像で表示します。頭を向けたときの動きが大きすぎる場合は、角度上限を下げます。</p>
+    <p>GLB・FBXも読み込めます。使える動きはモデルの骨格や表情のデータによって異なります。PSDの場合は、平面の立ち絵を傾けたり、目の差分を連動させたりできます。</p>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 id="related-title">関連ガイド</h2>
+      <ul class="guide-links">
+        <li><a href="/guides/psd-lip-sync/">PSDで口パクと目パチを設定</a></li>
+        <li><a href="/guides/obs-virtual-camera/">OBSに仮想カメラや透過映像を追加</a></li>
+      </ul>
+      <a class="button" href="/#download">V Lensをダウンロード</a>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/">V Lens</a><small>© studio-juh</small></footer>
+</body>
+</html>

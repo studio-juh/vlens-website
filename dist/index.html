@@ -4,13 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V LensはWindows 11向けのアバター・仮想カメラアプリです。PSDやVRMを読み込み、口パクや顔の動きを配信・通話に出力できます。">
+  <meta name="description" content="V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。">
+  <link rel="canonical" href="https://vlens.studiojuh.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="V Lens — Windows 11向けアバター・仮想カメラ">
-  <meta property="og:description" content="PSD・VRMのキャラクターを、配信や通話のカメラに。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/">
+  <meta property="og:title" content="V Lens | VTuber向け仮想カメラ・PSDリップシンク・VRMトラッキング">
+  <meta property="og:description" content="V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
-  <meta property="og:image:alt" content="V Lensの出力モニターと出力設定の実画面">
-  <title>V Lens — Windows 11向けアバター・仮想カメラ</title>
+  <meta property="og:image:alt" content="V Lensの出力モニターと仮想カメラ設定の実画面">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>V Lens | VTuber向け仮想カメラ・PSDリップシンク・VRMトラッキング</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://vlens.studiojuh.com/#website",
+        "name": "V Lens",
+        "url": "https://vlens.studiojuh.com/",
+        "inLanguage": "ja"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "V Lens",
+        "url": "https://vlens.studiojuh.com/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows 11 (x64)",
+        "description": "V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。",
+        "screenshot": "https://vlens.studiojuh.com/screenshots/output-monitor.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "studio-juh"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -32,8 +64,8 @@
       <div class="hero-copy">
         <p class="platform">Windows 11（x64）対応</p>
         <h1 id="hero-title">V Lens</h1>
-        <p class="hero-lead">PSD・VRMのキャラクターを、<br>配信や通話のカメラに。</p>
-        <p class="hero-description">素材を読み込んで口パクや顔の動きを合わせたら、OBSなどのアプリで映像を受け取れます。</p>
+        <p class="hero-lead">はじめてのVTuber配信に。<br>PSD・VRM対応の仮想カメラ</p>
+        <p class="hero-description">立ち絵や3Dアバターを読み込み、マイクで口パク、Webカメラで顔トラッキング。アバターの映像をOBSや通話アプリに映せます。</p>
         <a class="button" href="#download">ダウンロード</a>
       </div>
       <figure class="screenshot hero-shot">
@@ -45,7 +77,7 @@
     </section>
 
     <section class="wrap features" id="features" aria-labelledby="features-title">
-      <h2 id="features-title">素材と出力</h2>
+      <h2 id="features-title">VTuberアバターの口パク・顔トラッキング</h2>
       <div class="feature-main">
         <figure class="screenshot">
           <a href="./screenshots/psd-editor.jpg">
@@ -54,9 +86,9 @@
           <figcaption>PSD設定画面。内蔵サンプルで口形の割り当てを確認できます。</figcaption>
         </figure>
         <div class="feature-copy">
-          <h3>PSDのレイヤーで口パクと目パチ</h3>
+          <h3>PSDの立ち絵で簡単リップシンク</h3>
           <p>PSDの目や口の差分を割り当てます。口形は3段階または「あいうえお」に対応し、表情はショートカットで切り替えられます。</p>
-          <h3>VRMの顔の向きと視線を追跡</h3>
+          <h3>Webカメラで簡単フェイストラッキング</h3>
           <p>VRM 0.x／1.0に対応。カメラで顔の向き、まばたき、視線を読み取り、モデルに反映します。GLB・FBXも読み込めます。</p>
         </div>
       </div>
@@ -66,7 +98,7 @@
           <p>マイクやデスクトップ音声を使用できます。RNNoiseや発話判定、会話や歌に合わせたプリセットがあります。</p>
         </article>
         <article>
-          <h3>仮想カメラと透過出力</h3>
+          <h3>OBS向けの仮想カメラと透過出力</h3>
           <p>仮想カメラ「VCam」では出力中に背景色を切り替えられます。OBSで半透明を保って合成する場合はSpout2を選びます。</p>
         </article>
         <article>
@@ -79,8 +111,13 @@
     <section class="band" id="start" aria-labelledby="start-title">
       <div class="wrap start-layout">
         <div>
-          <h2 id="start-title">使い方</h2>
-          <p>内蔵サンプルで口パクを試せます。</p>
+          <h2 id="start-title">VTuberの始め方</h2>
+          <p>バーチャルYouTuber（Virtual YouTuber）を始めたい方は、まず内蔵サンプルをマイクで動かしてみてください。</p>
+          <ul class="guide-links">
+            <li><a href="/guides/psd-lip-sync/">PSDで口パクと目パチを設定</a></li>
+            <li><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔を動かす</a></li>
+            <li><a href="/guides/obs-virtual-camera/">OBSに仮想カメラや透過映像を追加</a></li>
+          </ul>
         </div>
         <ol class="steps">
           <li><h3>素材を開く</h3><p>PSDや3Dモデル、画像、動画を選びます。サンプルは「ファイル」メニューから開けます。</p></li>
@@ -94,6 +131,7 @@
       <h2 id="faq-title">よくある質問</h2>
       <div class="faq-list">
         <details><summary>どのOSで使えますか？</summary><p>Windows 11（x64）向けです。仮想カメラの登録には管理者権限が必要です。</p></details>
+        <details><summary>アバターを持っていなくても試せますか？</summary><p>内蔵PSDサンプルで、口パク・目パチ・表情の切り替えを試せます。自分のアバターを使う場合は、レイヤー付きのPSDや対応する3Dモデルを読み込みます。</p></details>
         <details><summary>カメラがなくても使えますか？</summary><p>音声による口パクと自動目パチ、画像・動画の出力はカメラなしで使えます。顔や視線のトラッキングにはカメラが必要です。</p></details>
         <details><summary>モデルによって動きに違いはありますか？</summary><p>表情や身体の動きは、モデルに用意されたボーンとモーフによって異なります。全身トラッキングは試験機能です。</p></details>
         <details><summary>映像と一緒に音声も送られますか？</summary><p>出力は映像のみです。配信する音声はOBSや通話アプリ側で設定してください。</p></details>

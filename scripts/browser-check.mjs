@@ -58,8 +58,21 @@ try {
   assert(await evaluate("document.querySelector('details').open"),'FAQ did not open');
   await evaluate("document.querySelector('summary').click()");
   assert(!await evaluate("document.querySelector('details').open"),'FAQ did not close');
+  const guides = await evaluate("[...document.querySelectorAll('#start .guide-links a')].map(a => a.href)");
+  assert(guides.length > 0, 'No guide links found');
+  for (const url of guides) {
+    await call('Page.navigate',{url});
+    for (let i=0;i<200;i++) {
+      if (await evaluate("document.readyState==='complete' && !!document.querySelector('.guide h1')")) break;
+      assert(i<199, 'Guide did not load: ' + url);
+      await delay(20);
+    }
+    assert(await evaluate("location.href") === url, 'Guide loaded at the wrong URL');
+    assert(await evaluate("document.documentElement.scrollWidth <= innerWidth"), 'Guide has horizontal overflow: ' + url);
+    assert(await evaluate("[...document.images].every(img => img.complete && img.naturalWidth > 0)"), 'Guide image did not load: ' + url);
+  }
   assert.deepEqual(errors,[]);
-  console.log('PASS: 4 viewport widths, no overflow, screenshots and original image links, FAQ, no script errors.');
+  console.log('PASS: 4 viewport widths, no overflow, screenshots and original image links, FAQ, mobile guides, no script errors.');
   await call('Browser.close').catch(()=>{});await exited;
 }finally{
   socket?.close();
