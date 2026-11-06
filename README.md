@@ -21,7 +21,7 @@ npm run dev
 - `dist/_headers` — 対応ホスト用のセキュリティヘッダー
 - `scripts/` — Node.js標準機能だけで動くプレビューと検証
 
-公開するファイルは `dist/` 内だけです。サブディレクトリ配信にも対応します。GitHub Pages・Cloudflare Pagesなどの静的ホスティングで公開できます。ホスティング先は未設定です。`_headers` の対応状況はホストによって異なります。
+Cloudflare WorkersのStatic Assetsで `dist/` 内を公開します。Worker名は `vlens-website`、カスタムドメインは [vlens.studiojuh.com](https://vlens.studiojuh.com) です。設定は `wrangler.jsonc` にあり、公開時は `npx --yes wrangler@4.158.0 deploy` を実行します。
 
 ## 公開内容の方針
 

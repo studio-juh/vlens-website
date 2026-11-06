@@ -1,0 +1,11 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.158.0/config-schema.json",
+  "name": "vlens-website",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist" },
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "vlens.studiojuh.com", "custom_domain": true }
+  ]
+}
