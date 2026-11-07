@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔トラッキング、設定の保存と復元を案内します。">
+  <link rel="canonical" href="https://vlens.studiojuh.com/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/help/">
+  <meta property="og:title" content="ヘルプ・トラブル対処 | V Lens">
+  <meta property="og:description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔トラッキング、設定の保存と復元を案内します。">
+  <title>ヘルプ・トラブル対処 | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <a class="header-link" href="/#download">ダウンロード</a>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <h1>V Lens ヘルプ</h1>
+    <p>インストールから出力までの手順と、映像・音声がうまく動かないときの確認箇所を案内します。</p>
+    <ul class="guide-links" aria-label="このページの目次">
+      <li><a href="#install">インストール・更新</a></li>
+      <li><a href="#output">出力・OBS</a></li>
+      <li><a href="#psd-audio">PSD・口パク・音声</a></li>
+      <li><a href="#tracking">顔トラッキング</a></li>
+      <li><a href="#settings">設定の保存・移行</a></li>
+    </ul>
+
+    <section id="install" aria-labelledby="install-title">
+      <h2 id="install-title">インストール・更新</h2>
+      <p>V LensはWindows 11（x64）向けです。更新する場合は、先にV Lensの「ファイル」→「終了」でアプリを閉じてください。インストーラーを実行し、仮想カメラ登録のための管理者承認を行ったら、スタートメニューからV Lensを起動します。</p>
+      <ul class="guide-links">
+        <li><a href="/#download">Windows版のダウンロード</a></li>
+        <li><a href="/#windows-protection">SmartScreenなどの警告が表示された場合</a></li>
+      </ul>
+    </section>
+
+    <section id="output" aria-labelledby="output-title">
+      <h2 id="output-title">出力・OBS</h2>
+      <p>初めて試すときは「ファイル」→「内蔵サンプル」→「簡単セットアップ（3段階）」を開きます。右側パネル下部の「出力先」で「仮想カメラ」を選び、すぐ下の「出力を開始」を押してください。</p>
+      <div class="faq-list">
+        <details>
+          <summary>「出力を開始」が押せない</summary>
+          <p>素材を開いてください。PSDを使う場合は口形の割り当てが必要です。解像度で「Custom」を選んで幅や高さを変えた場合は「適用」を押してください。仮想カメラが未登録の場合は、インストーラーで登録してからV Lensを起動し直します。</p>
+        </details>
+        <details>
+          <summary>OBSのカメラ一覧に「VCam」が出ない</summary>
+          <p>V Lensの出力先を「仮想カメラ」にして「出力中」になったことを確認し、OBSの「映像キャプチャデバイス」のデバイス一覧を開き直します。「パイプ使用中」と表示される場合は、旧版のV Lensなど、別のVCam出力を停止してください。</p>
+        </details>
+        <details>
+          <summary>OBSで背景を透過したい</summary>
+          <p>透過映像を送るには、OBSに対応するSpout2プラグインを導入し、V Lensの出力先を「Spout2（透過）」にします。仮想カメラを使う場合は、背景を緑または青にしてOBSのクロマキーで抜けます。</p>
+        </details>
+        <details>
+          <summary>ウィンドウを閉じても出力が続く</summary>
+          <p>右上の「×」はウィンドウを隠します。出力を止めるには、タスクバーの通知領域にあるV Lensアイコンを右クリックして「出力を停止」を選びます。アプリを終了する場合は「終了」を選びます。</p>
+        </details>
+      </div>
+      <p><a href="/guides/obs-virtual-camera/">OBSに仮想カメラや透過映像を追加する手順</a></p>
+    </section>
+
+    <section id="psd-audio" aria-labelledby="psd-audio-title">
+      <h2 id="psd-audio-title">PSD・口パク・音声</h2>
+      <p>PSD単体を開くと、元のレイヤー表示でプレビューされ、口や目の差分は未割り当てです。3段階の口パクを使う場合は「閉じ口」と「開き口」にレイヤーを割り当てます。「半開き」も設定できます。</p>
+      <div class="faq-list">
+        <details>
+          <summary>話しても口が動かない</summary>
+          <p>出力中に「音声・リップシンク」の「原音」メーターを確認します。動かない場合は、入力の種類とデバイスを確認してください。原音が動いている場合は、フィルターの発話判定や「口を開く音量」を確認します。声が小さくて口が開きにくいときは、しきい値を下げます。カメラとの連動を有効にしている場合は、口パクの配分も確認してください。</p>
+        </details>
+        <details>
+          <summary>PSDの合成や効果が未対応と表示される</summary>
+          <p>V LensはPSD v1の8 bit RGBに対応しています。未対応の効果や合成がある場合は、PSDの複製を作り、該当するレイヤーをラスタライズしてから開き直してください。</p>
+        </details>
+        <details>
+          <summary>割り当てた目や口の差分が表示されない</summary>
+          <p>「本体・表示状態」で親フォルダーが非表示になっていないか確認してください。フォルダーを非表示にすると、配下にある割り当て済みの差分も隠れます。自動目パチを使う場合は「目開き」と「目閉じ」を割り当て、自動目パチをオンにします。</p>
+        </details>
+      </div>
+      <p><a href="/guides/psd-lip-sync/">PSDで口パク・目パチを設定する手順</a></p>
+    </section>
+
+    <section id="tracking" aria-labelledby="tracking-title">
+      <h2 id="tracking-title">顔トラッキング</h2>
+      <p>モデルを読み込み、出力停止中に「設定」→「カメラトラッキング…」を開きます。使うWebカメラを選び、連動を有効にしてください。「プレビュー開始」を押すと、顔の検出結果を確認できます。</p>
+      <div class="faq-list">
+        <details>
+          <summary>顔を検出できない、または正面がずれる</summary>
+          <p>顔全体がカメラに入るように調整し、プレビューでランドマークを確認します。顔が検出されたら、楽な姿勢で正面を向いて「現在の向きを基準にする」を押してください。</p>
+        </details>
+      </div>
+      <p><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔を動かす手順</a></p>
+    </section>
+
+    <section id="settings" aria-labelledby="settings-title">
+      <h2 id="settings-title">設定の保存・移行</h2>
+      <p>別のPCに移す場合は、「ファイル」→「アプリ設定を保存…」で書き出し、移行先の「アプリ設定を読み込む…」から復元します。PSDキャラクターの設定だけを保存する場合は「PSD設定を保存…」を使います。</p>
+      <p>設定ファイルは外部素材の場所を参照します。JSONと一緒に、使っているPSD・モデル・画像・動画もコピーしてください。</p>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/">V Lens</a><small>© studio-juh</small></footer>
+</body>
+</html>

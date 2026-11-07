@@ -15,6 +15,7 @@ npm run dev
 ## 構成
 
 - `dist/index.html` — 日本語の製品紹介、機能、導入手順、FAQ、配布状況
+- `dist/help/` — インストール、操作、トラブル対処、設定移行
 - `dist/guides/` — PSD、VRMトラッキング、OBS連携の手順
 - `dist/sitemap.xml`・`dist/robots.txt` — 検索クローラー向けの公開URL一覧
 - `dist/style.css` — PC・スマートフォン対応
