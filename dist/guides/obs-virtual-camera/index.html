@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラVCamの追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。">
+  <meta name="description" content="V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラ「V Lens Camera」の追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。">
   <link rel="canonical" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/guides/obs-virtual-camera/">
   <meta property="og:title" content="OBSにVTuberアバターを映す方法 | V Lens">
-  <meta property="og:description" content="V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラVCamの追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。">
+  <meta property="og:description" content="V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラ「V Lens Camera」の追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
   <meta property="og:image:alt" content="V Lensの出力モニターと、仮想カメラ・背景色・解像度の設定">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,22 +28,23 @@
   <main class="wrap guide" id="main">
     <p class="guide-back"><a href="/#start">使い方一覧</a></p>
     <h1>OBSにVTuberアバターを映す方法</h1>
-    <p class="guide-lead">V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラVCamの追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。</p>
+    <p class="guide-lead">V LensのPSD・VRMアバターをOBS Studioへ出力する手順。仮想カメラ「V Lens Camera」の追加、グリーンバックのクロマキー、Spout2の透過合成を解説します。</p>
     <figure class="screenshot guide-shot">
       <a href="/screenshots/output-monitor.jpg"><img src="/screenshots/output-monitor.jpg" width="1052" height="830" alt="V Lensの出力モニターと、仮想カメラ・背景色・解像度の設定"></a>
-      <figcaption>V Lensの出力設定。仮想カメラやSpout2を切り替えられます。</figcaption>
+      <figcaption>0.1.36の出力設定。画面内の「VCam」は仮想カメラの旧名です。</figcaption>
     </figure>
-    <h2>仮想カメラ「VCam」をOBSに追加する</h2>
+    <h2>仮想カメラ「V Lens Camera」をOBSに追加する</h2>
     <ol>
       <li>V LensでPSD、VRM、または内蔵サンプルを開きます。出力先を「仮想カメラ」にして「出力を開始」を押します。</li>
-      <li>OBS Studioの「ソース」で「映像キャプチャデバイス」を追加し、デバイス一覧から「VCam」を選びます。</li>
+      <li>OBS Studioの「ソース」で「映像キャプチャデバイス」を追加し、デバイス一覧から「V Lens Camera」を選びます。</li>
       <li>映像が表示されたらシーン内の位置とサイズを調整します。配信に入れるマイク音声はOBS側で設定します。</li>
     </ol>
+    <p>0.1.39以前の「VCam」を選んでいた場合は、更新後に「V Lens Camera」を選び直してください。</p>
     <h2>グリーンバックや透過で合成する</h2>
     <p>仮想カメラでは、V Lensの「背景」を緑または青にして、OBSの映像ソースに「クロマキー」フィルターを追加します。V Lensの背景とOBSのキー色を合わせてください。</p>
     <p>半透明まで保つには、対応するSpout2プラグインをOBSに導入し、V Lensの出力先を「Spout2（透過）」にします。OBSで「Spout2 Capture」を追加して送信元「V Lens」を選びます。OBSはDirect3D 11で実行し、V Lensと同じGPUを使います。</p>
     <p><a href="https://github.com/Off-World-Live/obs-spout2-plugin/releases">OBS用Spout2プラグインの配布ページ</a></p>
-    <h2>デバイス一覧にVCamが出ないとき</h2>
+    <h2>デバイス一覧にV Lens Cameraが出ないとき</h2>
     <p>V Lensが「出力中」になってから、OBSのデバイス一覧を開き直します。仮想カメラが登録されていない場合は、Windows版インストーラーを実行し、仮想カメラの登録を承認してください。</p>
     <section class="guide-related" aria-labelledby="related-title">
       <h2 id="related-title">関連ガイド</h2>
