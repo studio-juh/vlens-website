@@ -49,7 +49,8 @@ try {
     fs.writeFileSync(path.join(output,name+'.png'),Buffer.from(capture.data,'base64'));
   }
   const screenshots = await evaluate("[...document.querySelectorAll('.screenshot img')].map(img=>({width:img.naturalWidth,height:img.naturalHeight,source:img.src,link:img.parentElement.href}))");
-  assert.equal(screenshots.length, 2);
+  assert.equal(screenshots.length, 3);
+  assert(screenshots.some(image => new URL(image.source).pathname === "/screenshots/vrm-avatar.jpg"), "VRM screenshot is missing");
   for (const image of screenshots) {
     assert(image.width > 0 && image.height > 0, 'Screenshot did not load');
     assert.equal(image.link, image.source, 'Screenshot must link to the original image');

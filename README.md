@@ -19,7 +19,7 @@ npm run dev
 - `dist/guides/` — PSD、VRMトラッキング、OBS連携の手順
 - `dist/sitemap.xml`・`dist/robots.txt` — 検索クローラー向けの公開URL一覧
 - `dist/style.css` — PC・スマートフォン対応
-- `dist/screenshots/` — V Lens 0.1.36で内蔵PSDを開いた実画面
+- `dist/screenshots/` — 内蔵PSD（0.1.36）・VRM（0.1.69）サンプルの実画面
 - `dist/favicon.svg` — ブランドアイコン
 - `dist/_headers` — 対応ホスト用のセキュリティヘッダー
 - `scripts/` — Node.js標準機能だけで動くプレビューと検証
@@ -30,7 +30,7 @@ Cloudflare WorkersのStatic Assetsで `dist/` 内を公開します。Worker名�
 
 Windows版インストーラーは、このリポジトリの [GitHub Releases](https://github.com/studio-juh/vlens-website/releases) で配布します。新版を公開したら、配布欄のバージョン、インストーラーのリンク、リリースノートのリンクを更新してください。アプリのソースコードは別の非公開リポジトリで管理します。
 
-スクリーンショットは、撮影用の設定で内蔵PSDサンプルを開いたものです。第三者のアバターモデル・カメラ映像・ユーザー素材は含みません。
+スクリーンショットは内蔵PSD・VRMサンプルを表示したものです。VRM画像は0.1.69で、カメラを使わずに撮影しています。内蔵VRMサンプル「[千駄ヶ谷 篠](https://hub.vroid.com/characters/4593660874193246717/models/7956589129305596116)」はpixivのCC0モデルをCoatie（Koh-Tee）がVRM 1.0へ変換したもので、V Lensではテクスチャを軽量化しています。カメラ映像やユーザー素材は含みません。
 
 価格、公開日、未確認の性能、未実装機能は掲載していません。0.1.69の身体・手指の追跡、手の安定性設定、身体・手指プレビューを案内しています。全身トラッキングと隠れた関節の補完は試験機能として記載しています。サイト自体はカメラ・マイクへのアクセスや解析用トラッキングを行いません。
 
