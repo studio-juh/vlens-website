@@ -6,8 +6,10 @@
   "description": "Vlens official website",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs",
-    "check:browser": "node scripts/browser-check.mjs"
+    "check": "node scripts/prepare-seo.mjs --check && node scripts/check.mjs",
+    "check:browser": "node scripts/browser-check.mjs",
+    "prepare:images": "node scripts/optimize-images.mjs",
+    "prepare:seo": "node scripts/prepare-seo.mjs"
   },
   "engines": {
     "node": ">=22"

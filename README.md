@@ -22,6 +22,7 @@ npm run dev
 - `dist/style.css` — PC・スマートフォン対応
 - `dist/screenshots/` — 内蔵PSD（0.1.36）・VRM（0.1.69）サンプルの実画面
 - `dist/favicon.svg` — ブランドアイコン
+- `dist/_redirects`・`dist/404.html` — URLの正規化と404案内
 - `dist/_headers` — 対応ホスト用のセキュリティヘッダー
 - `scripts/` — Node.js標準機能だけで動くプレビューと検証
 
@@ -48,3 +49,17 @@ Windows版インストーラーは、このリポジトリの [GitHub Releases](
 
 WindowsにMicrosoft Edgeがある場合は `npm run check:browser` で、日英両方の4種類の画面幅、スクリーンショットの表示と原寸リンク、FAQの開閉、各ガイド、言語切り替えを確認できます。専用の一時プロファイルを使用し、確認用の画像はGit管理外の `.preview/` へ保存します。
 
+
+## SEOと画像の更新
+
+日英10ページに固有のタイトル・説明、canonical・相互hreflang、Open Graph・Twitterの画像情報を設定しています。構造化データはページ上の情報から生成し、サイト・運営者・アプリ・各ページ・ガイドと、画面に表示したパンくずを関連付けます。サイトの識別子は言語間で共通です。
+
+本文・見出し・説明・配布リンクを編集したら、実質的に更新したURLの日時だけを `scripts/seo-pages.json` で更新し、`npm run prepare:seo` を実行してください。生成されたHTMLと、更新日・言語・画像を含むサイトマップを一緒にコミットします。検証の `npm run check` は、生成情報の反映漏れも検出します。更新日はビルドのたびに変更しません。
+
+スクリーンショットのJPEG原本は保存し、`picture` のWebP派生を640px・960px・原寸で用意します。原寸3枚の合計は約259KBから約131KBになりました。原寸リンクはJPEGのままです。最初の画像を優先して読み込み、画面下の画像は遅延読み込みにします。画像を差し替えたら `npm run prepare:images`（WindowsのEdgeが必要）で派生画像とPNGアイコンを再生成し、`npm run prepare:seo` も実行してください。
+
+既知ページのスラッシュなし・index.htmlは `dist/_redirects` の301で正規URLへ移動します。存在しないURLは案内ページと404を返し、サイトマップに含めません。Cloudflare管理のrobots設定は変更していません。
+
+公開後は検索エンジンの再クロール・再評価が必要です。Search ConsoleやBing Webmaster Toolsでの所有権確認・サイトマップ送信は、別途それぞれのアカウントで行います。公開用サイトマップは [sitemap.xml](https://vlens.studiojuh.com/sitemap.xml) です。
+
+設定の根拠は [Googleの構造化データ](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)、[パンくず](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)、[サイトマップ](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)、[画像](https://developers.google.com/search/docs/appearance/google-images) の公式ガイドを参照してください。

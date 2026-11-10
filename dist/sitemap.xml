@@ -1,13 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vlens.studiojuh.com/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/en/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/help/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/en/help/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/psd-lip-sync/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/en/guides/psd-lip-sync/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/vrm-face-tracking/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/en/guides/vrm-face-tracking/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/obs-virtual-camera/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/en/guides/obs-virtual-camera/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://vlens.studiojuh.com/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/output-monitor.jpg</image:loc></image:image>
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/psd-editor.jpg</image:loc></image:image>
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/output-monitor.jpg</image:loc></image:image>
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/psd-editor.jpg</image:loc></image:image>
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/help/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/help/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/help/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/help/" />
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/en/help/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/help/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/help/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/help/" />
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/guides/psd-lip-sync/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/psd-lip-sync/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/psd-lip-sync/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/psd-lip-sync/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/psd-editor.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/en/guides/psd-lip-sync/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/psd-lip-sync/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/psd-lip-sync/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/psd-lip-sync/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/psd-editor.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/guides/vrm-face-tracking/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/en/guides/vrm-face-tracking/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/guides/obs-virtual-camera/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/obs-virtual-camera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/output-monitor.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vlens.studiojuh.com/en/guides/obs-virtual-camera/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/obs-virtual-camera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/" />
+    <image:image><image:loc>https://vlens.studiojuh.com/screenshots/output-monitor.jpg</image:loc></image:image>
+  </url>
 </urlset>

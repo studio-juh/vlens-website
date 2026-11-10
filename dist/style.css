@@ -26,9 +26,9 @@ h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.5; }
 .header-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 1.3rem; white-space: nowrap; }
 .brand img { border-radius: 7px; }
-nav { display: flex; gap: 30px; }
-nav a, .header-link { font-size: .9rem; color: var(--muted); }
-nav a:hover, .header-link:hover { color: var(--accent); }
+.site-header nav { display: flex; gap: 30px; }
+.site-header nav a, .header-link { font-size: .9rem; color: var(--muted); }
+.site-header nav a:hover, .header-link:hover { color: var(--accent); }
 .header-link { white-space: nowrap; }
 .header-actions { display: flex; align-items: center; gap: 18px; }
 .language-switch { display: flex; align-items: center; gap: 7px; font-size: .82rem; white-space: nowrap; }
@@ -47,6 +47,7 @@ nav a:hover, .header-link:hover { color: var(--accent); }
 
 .screenshot { min-width: 0; margin: 0; }
 .screenshot > a { display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #181e25; }
+.screenshot picture { display: block; }
 .screenshot img { display: block; width: 100%; height: auto; }
 .screenshot figcaption { color: var(--muted); margin-top: 9px; font-size: .8rem; line-height: 1.5; }
 .screenshot figcaption a { text-decoration: underline; text-underline-offset: .2em; }
@@ -109,7 +110,7 @@ summary { cursor: pointer; padding-block: 12px; }
   .wrap { width: calc(100% - 32px); }
   .header-inner { min-height: 60px; gap: 10px; flex-wrap: wrap; padding-block: 12px; }
   .header-actions { gap: 12px; margin-left: auto; }
-  nav { display: none; }
+  .site-header nav { display: none; }
   .hero, .feature-main, .feature-list, .start-layout, .faq { grid-template-columns: minmax(0, 1fr); }
   .hero { padding-block: 38px; gap: 28px; }
   .features, .faq { padding-block: 36px; }
@@ -117,4 +118,17 @@ summary { cursor: pointer; padding-block: 12px; }
   .feature-list, .start-layout, .faq { gap: 15px; }
   .feature-vrm { margin-top: 28px; }
   .faq h2 { margin-bottom: 2px; }
+}
+
+.breadcrumbs { display: block; margin-bottom: 20px; font-size: .85rem; color: var(--muted); }
+.guide .breadcrumbs ol { display: flex; flex-wrap: wrap; list-style: none; gap: 6px 10px; padding: 0; margin: 0; }
+.guide .breadcrumbs li + li { margin-top: 0; }
+.breadcrumbs li + li::before { content: "/"; margin-right: 10px; color: var(--muted); }
+.breadcrumbs a, .footer-links a { text-decoration: underline; text-underline-offset: .2em; }
+.breadcrumbs a:hover, .footer-links a:hover { color: var(--accent); }
+.site-footer { flex-wrap: wrap; }
+.footer-links { display: flex; flex: 1; justify-content: center; flex-wrap: wrap; gap: 8px 20px; font-size: .85rem; color: var(--muted); }
+@media (max-width: 650px) {
+  .footer-links { order: 3; flex-basis: 100%; justify-content: flex-start; }
+  .site-footer small { margin-left: auto; }
 }
