@@ -49,6 +49,7 @@ nav a:hover, .header-link:hover { color: var(--accent); }
 .feature-main { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 38px; align-items: center; }
 .feature-copy p { margin-bottom: 26px; }
 .feature-copy p:last-child { margin-bottom: 0; }
+.feature-copy a, .faq-list a { text-decoration: underline; text-underline-offset: .2em; }
 .feature-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 37px; padding-top: 25px; border-top: 1px solid var(--line); gap: 34px; }
 .feature-list p, .feature-copy p { font-size: .9rem; }
 

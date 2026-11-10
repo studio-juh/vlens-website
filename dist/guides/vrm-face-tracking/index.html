@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。">
+  <meta name="description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身追跡の試験機能、手の誤検出を抑える設定、身体・手指のプレビューを案内します。">
   <link rel="canonical" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
-  <meta property="og:title" content="WebカメラでVRMの顔トラッキングを始める | V Lens">
-  <meta property="og:description" content="V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。">
+  <meta property="og:title" content="WebカメラでVRMの顔・身体・指を動かす | V Lens">
+  <meta property="og:description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身追跡の試験機能、手の誤検出を抑える設定、身体・手指のプレビューを案内します。">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
   <meta property="og:image:alt" content="V Lensの出力モニター">
   <meta name="twitter:card" content="summary_large_image">
-  <title>WebカメラでVRMの顔トラッキングを始める | V Lens</title>
+  <title>WebカメラでVRMの顔・身体・指を動かす | V Lens</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -27,8 +27,8 @@
   </div></header>
   <main class="wrap guide" id="main">
     <p class="guide-back"><a href="/#start">使い方一覧</a></p>
-    <h1>WebカメラでVRMの顔トラッキングを始める</h1>
-    <p class="guide-lead">V LensでVRMアバターのフェイストラッキングを設定する方法。Webカメラで顔の向き、まばたき、視線を反映し、音声とカメラの口パクを調整できます。</p>
+    <h1>WebカメラでVRMの顔・身体・指を動かす</h1>
+    <p class="guide-lead">V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身追跡の試験機能、手の誤検出を抑える設定、身体・手指のプレビューを案内します。</p>
     <h2>VRMとWebカメラをつなぐ</h2>
     <ol>
       <li>「モデルを開く…」からVRM 0.xまたはVRM 1.0のファイルを読み込みます。</li>
@@ -38,8 +38,30 @@
     <h2>顔の向き、視線、口パクを調整する</h2>
     <p>VRMの顔の向きや目線、まばたきは、モデルが対応するボーンや表情に反映されます。鏡に映るように動かしたい場合は、カメラトラッキング設定の「動きの対応」で「鏡」を選びます。</p>
     <p>口パクは「音声のみ」から「カメラのみ」まで5段階で配分できます。マイクで口を動かしながら、まばたきや頭の動きだけWebカメラで合わせることもできます。首と肩を一緒に動かしたい場合は「顔＋上半身の自然な連動」を選べます。</p>
-    <h2>顔を見つけられないとき</h2>
-    <p>顔全体がカメラの画角に入るように調整し、トラッキング設定でランドマークを確認します。確認画面は顔の点・線だけ、または強いモザイクを重ねた映像で表示します。頭を向けたときの動きが大きすぎる場合は、角度上限を下げます。</p>
+    <h2 id="body-mode">身体と指の動きを使う（試験）</h2>
+    <p>出力を停止してカメラトラッキング設定を開き、「VRMの身体」でモードを選び、「適用して保存」を押します。</p>
+    <ul>
+      <li><strong>顔のみ</strong> — 頭の向き・目パチ・口パクを連動します。</li>
+      <li><strong>顔＋上半身の自然な連動（初期値）</strong> — 顔の動きに合わせて首・胸・肩を控えめに動かします。</li>
+      <li><strong>全身・手指トラッキング（試験）</strong> — 身体の向き、腕・脚、手のひら・手首と左右の指一本ずつを追跡します。対応するボーンのあるモデルが必要です。</li>
+    </ul>
+    <p>全身を動かすときは頭から足先まで画角に入れ、手は指が見える大きさに映してください。全身モードでは、カメラが対応していれば720pに近い入力を使い、手周辺を切り出して指を検出します。頭の動きは身体・手指の処理と分けて反映します。カメラやPCの性能、照明、手の映る大きさによって追跡の速さと精度は変わります。</p>
+    <h2 id="hand-stability">手の誤検出を抑える</h2>
+    <p>全身モードの「手の追跡」で、反応の速さと検出の安定性を選べます。変更するときは出力を停止し、「適用して保存」を押してください。</p>
+    <ul>
+      <li><strong>反応優先</strong> — 追加の確認待ちを入れず、手の動きを素早く反映します。</li>
+      <li><strong>バランス（初期値）</strong> — 連続する2フレームで同じ手と判断してから反映します。30 FPS入力で確認待ちは約33 msです。</li>
+      <li><strong>安定優先</strong> — 連続する4フレームで確認します。30 FPS入力で約100 msの確認待ちを許容し、短い誤検出を抑えます。</li>
+    </ul>
+    <p>待ち時間は手を新たに検出したときや、位置・向きが急変したときの追加分の目安です。継続して追跡できている手に、毎回同じ待ち時間を加える設定ではありません。顔の追跡には影響しません。</p>
+    <h2>肘や手が隠れたときの動き</h2>
+    <p>肩と手首が見えて肘が隠れた場合は、手首の動きや手のひらの向きから肘を補います。位置や回転が曖昧な腕は、腕を少し下げたAポーズに近い姿勢へ重みを置きます。前腕のひねりと手首の傾きを分け、急な反転や無理な曲がりを抑えます。</p>
+    <p>追跡が短く途切れたときは直前の姿勢を保ち、見失った状態が続けば腕や指を楽な姿勢へ滑らかに戻します。補完を含む全身追跡は試験機能です。1台のカメラで見えない関節の位置や回転を正確に再現できるものではなく、重なりや画角外では誤差が残ります。</p>
+    <h2 id="preview">顔・身体・指の検出状態を確認する</h2>
+    <p>「プレビュー開始」→「モザイク映像＋ランドマーク」で検出状態を確認します。全身モードでは、顔の点・線に加えて身体の骨格を青、左手の関節を橙、右手を紫で表示します。色の左右はカメラに映る人を基準にしています。顔や身体が見えず、手だけを検出した場合も表示します。</p>
+    <p>「顔の3D」は顔専用の立体表示です。未加工のカメラ映像は表示せず、モザイク映像では同じカメラフレームの検出結果を重ねます。</p>
+    <h2>顔を見つけられないとき・正面がずれるとき</h2>
+    <p>顔全体がカメラの画角に入るように調整し、ランドマークを確認します。顔を検出した状態で「現在の向きを基準にする」を押すと、楽な姿勢を正面として取り直せます。出力中はモニターの「正面合わせ」も使えます。頭を向けたときの動きが大きすぎる場合は、出力を停止して角度上限を下げます。</p>
     <p>GLB・FBXも読み込めます。使える動きはモデルの骨格や表情のデータによって異なります。PSDの場合は、平面の立ち絵を傾けたり、目の差分を連動させたりできます。</p>
     <section class="guide-related" aria-labelledby="related-title">
       <h2 id="related-title">関連ガイド</h2>

@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。">
+  <meta name="description" content="V LensはWindows 11向けのVTuberアプリ。PSD・VRMの口パク・目パチとWebカメラの顔追跡に対応。身体・手指の追跡は試験機能として利用でき、OBSへ仮想カメラやSpout2で出力できます。">
   <link rel="canonical" href="https://vlens.studiojuh.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/">
   <meta property="og:title" content="V Lens | VTuber向け仮想カメラ・PSDリップシンク・VRMトラッキング">
-  <meta property="og:description" content="V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。">
+  <meta property="og:description" content="V LensはWindows 11向けのVTuberアプリ。PSD・VRMの口パク・目パチとWebカメラの顔追跡に対応。身体・手指の追跡は試験機能として利用でき、OBSへ仮想カメラやSpout2で出力できます。">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
   <meta property="og:image:alt" content="V Lensの出力モニターと仮想カメラ設定の実画面">
   <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
         "url": "https://vlens.studiojuh.com/",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Windows 11 (x64)",
-        "description": "V LensはWindows 11向けのVTuberアプリ。PSDの立ち絵やVRMモデルでマイクの声に合わせた口パク・目パチ、Webカメラの顔トラッキングを設定し、OBSへ仮想カメラやSpout2で出力できます。",
+        "description": "V LensはWindows 11向けのVTuberアプリ。PSD・VRMの口パク・目パチとWebカメラの顔追跡に対応。身体・手指の追跡は試験機能として利用でき、OBSへ仮想カメラやSpout2で出力できます。",
         "screenshot": "https://vlens.studiojuh.com/screenshots/output-monitor.jpg",
         "publisher": {
           "@type": "Organization",
@@ -66,7 +66,7 @@
         <p class="platform">Windows 11（x64）対応</p>
         <h1 id="hero-title">V Lens</h1>
         <p class="hero-lead">はじめてのVTuber配信に。<br>PSD・VRM対応の仮想カメラ</p>
-        <p class="hero-description">立ち絵や3Dアバターを読み込み、マイクで口パク、Webカメラで顔トラッキング。アバターの映像をOBSや通話アプリに映せます。</p>
+        <p class="hero-description">立ち絵や3Dアバターを読み込み、マイクで口パク、Webカメラで顔トラッキング。身体・手指の追跡も試せます。アバターの映像をOBSや通話アプリに映せます。</p>
         <a class="button" href="#download">ダウンロード</a>
       </div>
       <figure class="screenshot hero-shot">
@@ -78,7 +78,7 @@
     </section>
 
     <section class="wrap features" id="features" aria-labelledby="features-title">
-      <h2 id="features-title">VTuberアバターの口パク・顔トラッキング</h2>
+      <h2 id="features-title">VTuberアバターの口パク・トラッキング</h2>
       <div class="feature-main">
         <figure class="screenshot">
           <a href="./screenshots/psd-editor.jpg">
@@ -91,6 +91,8 @@
           <p>PSDの目や口の差分を割り当てます。口形は3段階または「あいうえお」に対応し、表情はショートカットで切り替えられます。</p>
           <h3>Webカメラで簡単フェイストラッキング</h3>
           <p>VRM 0.x／1.0に対応。カメラで顔の向き、まばたき、視線を読み取り、モデルに反映します。GLB・FBXも読み込めます。</p>
+          <h3>身体と指一本ずつを追跡（試験）</h3>
+          <p>全身モードでは、身体の向きから手のひら・手首・左右の指まで連動します。手の誤検出が気になるときは「手の追跡」を安定優先に。隠れた肘を補い、見失った腕は楽な姿勢へ滑らかに戻します。<a href="/guides/vrm-face-tracking/">設定方法と試験機能の範囲</a></p>
         </div>
       </div>
       <div class="feature-list">
@@ -104,7 +106,7 @@
         </article>
         <article>
           <h3>追跡プレビューの表示</h3>
-          <p>追跡用カメラの確認画面にはモザイク映像やランドマークを表示します。アプリ画面に未加工のカメラ映像は表示しません。</p>
+          <p>モザイク映像に顔の点・身体の骨格・左右の指の関節を重ねて、検出状態を確認できます。身体・手指の表示は全身モードで使えます。アプリ画面に未加工のカメラ映像は表示しません。</p>
         </article>
       </div>
     </section>
@@ -116,7 +118,7 @@
           <p>バーチャルYouTuber（Virtual YouTuber）を始めたい方は、まず内蔵サンプルをマイクで動かしてみてください。</p>
           <ul class="guide-links">
             <li><a href="/guides/psd-lip-sync/">PSDで口パクと目パチを設定</a></li>
-            <li><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔を動かす</a></li>
+            <li><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔・身体・指を動かす</a></li>
             <li><a href="/guides/obs-virtual-camera/">OBSに仮想カメラや透過映像を追加</a></li>
             <li><a href="/help/">ヘルプ・トラブル対処</a></li>
           </ul>
@@ -135,6 +137,7 @@
         <details><summary>どのOSで使えますか？</summary><p>Windows 11（x64）向けです。仮想カメラの登録には管理者権限が必要です。</p></details>
         <details><summary>アバターを持っていなくても試せますか？</summary><p>内蔵PSDサンプルで、口パク・目パチ・表情の切り替えを試せます。自分のアバターを使う場合は、レイヤー付きのPSDや対応する3Dモデルを読み込みます。</p></details>
         <details><summary>カメラがなくても使えますか？</summary><p>音声による口パクと自動目パチ、画像・動画の出力はカメラなしで使えます。顔や視線のトラッキングにはカメラが必要です。</p></details>
+        <details><summary>手が誤検出されるときは？</summary><p>全身モードの「手の追跡」で「バランス」または「安定優先」を選ぶと、複数のフレームで手を確認してから反映します。安定優先は検出の確認に少し時間をかけます。<a href="/guides/vrm-face-tracking/#hand-stability">設定ごとの違い</a>を確認してください。</p></details>
         <details><summary>モデルによって動きに違いはありますか？</summary><p>表情や身体の動きは、モデルに用意されたボーンとモーフによって異なります。全身トラッキングは試験機能です。</p></details>
         <details><summary>映像と一緒に音声も送られますか？</summary><p>出力は映像のみです。配信する音声はOBSや通話アプリ側で設定してください。</p></details>
       </div>
@@ -142,10 +145,10 @@
 
     <section class="wrap download" id="download" aria-labelledby="download-title">
       <h2 id="download-title">ダウンロード</h2>
-      <p>V Lens 0.1.40 · Windows 11（x64）用 NSIS インストーラー</p>
+      <p>V Lens 0.1.69 · Windows 11（x64）用 NSIS インストーラー</p>
       <div class="download-actions">
-        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.40/V-Lens_0.1.40_x64-setup.exe">インストーラーをダウンロード</a>
-        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.40">リリースノート</a>
+        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.69/V-Lens_0.1.69_x64-setup.exe">インストーラーをダウンロード</a>
+        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.69">リリースノート</a>
       </div>
       <p class="download-notice">インストーラーは未署名です。Windows のセキュリティ機能により、起動時に警告が出る場合があります。</p>
       <details class="install-help" id="windows-protection">

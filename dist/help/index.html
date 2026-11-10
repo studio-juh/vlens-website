@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔トラッキング、設定の保存と復元を案内します。">
+  <meta name="description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔・身体・手指のトラッキング、設定の保存と復元を案内します。">
   <link rel="canonical" href="https://vlens.studiojuh.com/help/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/help/">
   <meta property="og:title" content="ヘルプ・トラブル対処 | V Lens">
-  <meta property="og:description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔トラッキング、設定の保存と復元を案内します。">
+  <meta property="og:description" content="V Lensのインストール、仮想カメラとSpout2の出力、PSDの口パク、顔・身体・手指のトラッキング、設定の保存と復元を案内します。">
   <title>ヘルプ・トラブル対処 | V Lens</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
@@ -29,7 +29,7 @@
       <li><a href="#install">インストール・更新</a></li>
       <li><a href="#output">出力・OBS</a></li>
       <li><a href="#psd-audio">PSD・口パク・音声</a></li>
-      <li><a href="#tracking">顔トラッキング</a></li>
+      <li><a href="#tracking">顔・身体・手指のトラッキング</a></li>
       <li><a href="#settings">設定の保存・移行</a></li>
     </ul>
 
@@ -88,20 +88,28 @@
     </section>
 
     <section id="tracking" aria-labelledby="tracking-title">
-      <h2 id="tracking-title">顔トラッキング</h2>
-      <p>モデルを読み込み、出力停止中に「設定」→「カメラトラッキング…」を開きます。使うWebカメラを選び、連動を有効にしてください。「プレビュー開始」を押すと、顔の検出結果を確認できます。</p>
+      <h2 id="tracking-title">顔・身体・手指のトラッキング</h2>
+      <p>モデルを読み込み、出力停止中に「設定」→「カメラトラッキング…」を開きます。使うWebカメラを選び、連動を有効にしてください。「プレビュー開始」を押すと検出結果を確認できます。全身モードの「モザイク映像＋ランドマーク」では、身体の骨格と左右の指の関節も表示します。</p>
       <div class="faq-list">
         <details>
           <summary>顔を検出できない、または正面がずれる</summary>
           <p>顔全体がカメラに入るように調整し、プレビューでランドマークを確認します。顔が検出されたら、楽な姿勢で正面を向いて「現在の向きを基準にする」を押してください。</p>
         </details>
+        <details>
+          <summary>手が突然動く・誤検出が気になる</summary>
+          <p>出力を停止し、カメラトラッキングの全身モードで「手の追跡」を「バランス」または「安定優先」に変更します。「安定優先」は新たな検出や急変を複数フレームで確認します。手全体を画角に収め、指が見える明るさと距離も調整してください。</p>
+        </details>
+        <details>
+          <summary>隠れた肘や手の動きが実際と違う</summary>
+          <p>全身追跡は試験機能です。見えない肘を補い、曖昧な腕はAポーズに近い姿勢へ寄せますが、実際の位置や回転と違う場合があります。手・肘・肩がカメラに入るように調整してください。身体の追跡を使わない場合は「顔＋上半身の自然な連動」を選べます。</p>
+        </details>
       </div>
-      <p><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔を動かす手順</a></p>
+      <p><a href="/guides/vrm-face-tracking/">WebカメラでVRMの顔・身体・指を動かす手順</a></p>
     </section>
 
     <section id="settings" aria-labelledby="settings-title">
       <h2 id="settings-title">設定の保存・移行</h2>
-      <p>別のPCに移す場合は、「ファイル」→「アプリ設定を保存…」で書き出し、移行先の「アプリ設定を読み込む…」から復元します。PSDキャラクターの設定だけを保存する場合は「PSD設定を保存…」を使います。</p>
+      <p>普段の設定は自動で保存・復元されます。別のPCに移す場合は、「設定」→「アプリ設定のバックアップ」→「バックアップを保存…」で書き出し、移行先の「バックアップから復元…」で読み込みます。PSDキャラクターの設定だけを保存する場合は「PSD設定を保存…」を使います。</p>
       <p>設定ファイルは外部素材の場所を参照します。JSONと一緒に、使っているPSD・モデル・画像・動画もコピーしてください。</p>
     </section>
   </main>
