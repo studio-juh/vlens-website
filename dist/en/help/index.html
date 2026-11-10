@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="Help with installing V Lens, virtual camera and Spout2 output, PSD lip sync, face, body and finger tracking, and saving or restoring settings.">
+  <link rel="canonical" href="https://vlens.studiojuh.com/en/help/">
+  <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/help/">
+  <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/help/">
+  <link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/en/help/">
+  <meta property="og:title" content="Help and troubleshooting | V Lens">
+  <meta property="og:description" content="Help with installing V Lens, virtual camera and Spout2 output, PSD lip sync, face, body and finger tracking, and saving or restoring settings.">
+  <title>Help and troubleshooting | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/en/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><a href="/help/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="/en/help/" lang="en" hreflang="en" aria-current="page">EN</a></div><a class="header-link" href="/en/#download">Download</a></div>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <h1>V Lens help</h1>
+    <p>Find installation and output instructions, and things to check when video or audio does not work as expected.</p>
+    <p>The app interface is currently in Japanese. English descriptions below include the Japanese labels to help you find each control.</p>
+    <ul class="guide-links" aria-label="On this page">
+      <li><a href="#install">Install and update</a></li>
+      <li><a href="#output">Output and OBS</a></li>
+      <li><a href="#psd-audio">PSD, lip sync and audio</a></li>
+      <li><a href="#tracking">Face, body and finger tracking</a></li>
+      <li><a href="#settings">Save and transfer settings</a></li>
+    </ul>
+
+    <section id="install" aria-labelledby="install-title">
+      <h2 id="install-title">Install and update</h2>
+      <p>V Lens runs on Windows 11 (x64). Before updating, close the app with File (ファイル) → Exit (終了). Run the installer and approve the administrator prompt to register the virtual camera, then launch V Lens from the Start menu.</p>
+      <ul class="guide-links">
+        <li><a href="/en/#download">Download for Windows</a></li>
+        <li><a href="/en/#windows-protection">If SmartScreen or another Windows warning appears</a></li>
+      </ul>
+    </section>
+
+    <section id="output" aria-labelledby="output-title">
+      <h2 id="output-title">Output and OBS</h2>
+      <p>To try the app, open File (ファイル) → Built-in samples (内蔵サンプル) → Simple setup, three mouth shapes (簡単セットアップ（3段階）). At the bottom of the right panel, set Output destination (出力先) to Virtual camera (仮想カメラ), then click Start output (出力を開始) directly below it.</p>
+      <p id="camera-name">Since version 0.1.40, the virtual camera is named “V Lens Camera.” If OBS or your calling app still uses the old “VCam” device, start output in V Lens and select the camera again. Some Windows lists display it as “V Lens Camera (Windows 仮想カメラ).”</p>
+      <div class="faq-list">
+        <details>
+          <summary>Start output is unavailable</summary>
+          <p>Open a supported file first. For a PSD, assign the mouth layers. If you selected Custom resolution and changed the width or height, click Apply (適用). If the virtual camera is not registered, register it with the installer and restart V Lens.</p>
+        </details>
+        <details>
+          <summary>V Lens Camera is missing from the OBS device list</summary>
+          <p>Set V Lens to Virtual camera (仮想カメラ), confirm the status is Output active (出力中), then reopen the device list for OBS’s Video Capture Device source. If V Lens reports “パイプ使用中” (pipe in use), stop output in any other V Lens instance, including an older version.</p>
+        </details>
+        <details>
+          <summary>I want a transparent background in OBS</summary>
+          <p>Install a compatible Spout2 plugin in OBS and set V Lens’s destination to Spout2 with transparency (Spout2（透過）). When using the virtual camera, you can instead choose a green or blue background and remove it with OBS’s Chroma Key filter.</p>
+        </details>
+        <details>
+          <summary>Output continues after I close the window</summary>
+          <p>The × button hides the window. To stop output, right-click the V Lens icon in the taskbar notification area and choose Stop output (出力を停止). Choose Exit (終了) to quit the app.</p>
+        </details>
+      </div>
+      <p><a href="/en/guides/obs-virtual-camera/">Add a virtual camera or transparent output to OBS</a></p>
+    </section>
+
+    <section id="psd-audio" aria-labelledby="psd-audio-title">
+      <h2 id="psd-audio-title">PSD, lip sync and audio</h2>
+      <p>Opening a PSD displays its original layer visibility. Mouth and eye variants are initially unassigned. For three-shape lip sync, assign layers to Closed mouth (閉じ口) and Open mouth (開き口). You can also assign Half open (半開き).</p>
+      <div class="faq-list">
+        <details>
+          <summary>The mouth does not move when I speak</summary>
+          <p>While output is active, check the Raw audio (原音) meter in Audio and lip sync (音声・リップシンク). If it does not move, check the input type and device. If it moves, check the filter’s speech detection and Mouth opening level (口を開く音量). Lower the threshold if a quiet voice does not open the mouth. If camera tracking is enabled, also check the audio/camera lip-sync blend.</p>
+        </details>
+        <details>
+          <summary>A PSD blend mode or effect is unsupported</summary>
+          <p>V Lens supports PSD v1 with 8-bit RGB color. Make a copy of the PSD, rasterize the layers with unsupported effects or blending, then open the copy.</p>
+        </details>
+        <details>
+          <summary>Assigned eye or mouth layers do not appear</summary>
+          <p>Check that the parent folder is visible under Body and visibility (本体・表示状態). Hiding a folder also hides its assigned child layers. To use automatic blinking, assign Eyes open (目開き) and Eyes closed (目閉じ), then enable automatic blinking.</p>
+        </details>
+      </div>
+      <p><a href="/en/guides/psd-lip-sync/">Set up PSD lip sync and blinking</a></p>
+    </section>
+
+    <section id="tracking" aria-labelledby="tracking-title">
+      <h2 id="tracking-title">Face, body and finger tracking</h2>
+      <p>Load a model, stop output, then open Settings (設定) → Camera tracking (カメラトラッキング…). Select your webcam and enable tracking. Click Start preview (プレビュー開始) to check detection. In full-body mode, Mosaic video + landmarks (モザイク映像＋ランドマーク) also shows the body skeleton and joints of both hands.</p>
+      <div class="faq-list">
+        <details>
+          <summary>My face is not detected, or the forward direction is wrong</summary>
+          <p>Keep your whole face in the camera frame and check the preview landmarks. Once your face is detected, face forward in a relaxed position and click Use current orientation as reference (現在の向きを基準にする).</p>
+        </details>
+        <details>
+          <summary>Hands move suddenly or appear when they should not</summary>
+          <p>Stop output and, in full-body camera tracking mode, change Hand tracking (手の追跡) to Balanced (バランス) or Stability first (安定優先). Stability first checks new detections and sudden changes over several frames. Keep the whole hand in view, with enough light and a distance that makes the fingers visible.</p>
+        </details>
+        <details>
+          <summary>A hidden elbow or hand moves differently from my real arm</summary>
+          <p>Full-body tracking is experimental. It estimates hidden elbows and favors a relaxed A-pose when an arm’s position is uncertain, but its position or rotation may differ from yours. Try to keep the hand, elbow and shoulder visible. To avoid full-body tracking, choose Natural face and upper-body follow (顔＋上半身の自然な連動).</p>
+        </details>
+      </div>
+      <p><a href="/en/guides/vrm-face-tracking/">Track a VRM avatar’s face, body and fingers with a webcam</a></p>
+    </section>
+
+    <section id="settings" aria-labelledby="settings-title">
+      <h2 id="settings-title">Save and transfer settings</h2>
+      <p>Everyday settings are saved and restored automatically. To move them to another PC, choose Settings (設定) → App settings backup (アプリ設定のバックアップ) → Save backup (バックアップを保存…). On the other PC, choose Restore from backup (バックアップから復元…). To save only a PSD character’s settings, use Save PSD settings (PSD設定を保存…).</p>
+      <p>Settings files refer to the locations of external assets. Copy the PSDs, models, images and videos along with the JSON file.</p>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/en/">V Lens</a><small>© studio-juh</small></footer>
+</body>
+</html>

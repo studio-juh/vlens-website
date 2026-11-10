@@ -38,42 +38,72 @@ try {
   await call('Runtime.enable');
   await call('Page.enable');
   await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
-  await call('Page.navigate',{url:'http://127.0.0.1:'+server.address().port+'/'});
-  for(let i=0;i<200;i++){if(await evaluate("document.readyState==='complete' && !!document.querySelector('.hero-shot')"))break;assert(i<199);await delay(20);}
-  for(const [name,width,height] of [['desktop',1440,1100],['tablet',820,1000],['mobile',390,844],['small',320,750]]){
-    await call('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false});
-    await delay(100);
-    const layout=await evaluate("({width:innerWidth,content:document.documentElement.scrollWidth,broken:[...document.images].some(i=>!i.complete||i.naturalWidth===0)})");
-    assert(layout.content<=layout.width, name+' horizontal overflow: '+JSON.stringify(layout));assert(!layout.broken);
-    const capture=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:await evaluate('document.documentElement.scrollHeight'),scale:1}});
-    fs.writeFileSync(path.join(output,name+'.png'),Buffer.from(capture.data,'base64'));
-  }
-  const screenshots = await evaluate("[...document.querySelectorAll('.screenshot img')].map(img=>({width:img.naturalWidth,height:img.naturalHeight,source:img.src,link:img.parentElement.href}))");
-  assert.equal(screenshots.length, 3);
-  assert(screenshots.some(image => new URL(image.source).pathname === "/screenshots/vrm-avatar.jpg"), "VRM screenshot is missing");
-  for (const image of screenshots) {
-    assert(image.width > 0 && image.height > 0, 'Screenshot did not load');
-    assert.equal(image.link, image.source, 'Screenshot must link to the original image');
-  }
-  await evaluate("document.querySelector('summary').click()");
-  assert(await evaluate("document.querySelector('details').open"),'FAQ did not open');
-  await evaluate("document.querySelector('summary').click()");
-  assert(!await evaluate("document.querySelector('details').open"),'FAQ did not close');
-  const guides = await evaluate("[...document.querySelectorAll('#start .guide-links a')].map(a => a.href)");
-  assert(guides.length > 0, 'No guide links found');
-  for (const url of guides) {
+  const origin='http://127.0.0.1:'+server.address().port;
+  const navigate=async (url,selector) => {
     await call('Page.navigate',{url});
-    for (let i=0;i<200;i++) {
-      if (await evaluate("document.readyState==='complete' && !!document.querySelector('.guide h1')")) break;
-      assert(i<199, 'Guide did not load: ' + url);
-      await delay(20);
+    for(let i=0;i<200;i++) {
+      if(await evaluate("location.href==="+JSON.stringify(url)+" && document.readyState==='complete' && !!document.querySelector("+JSON.stringify(selector)+")")) return;
+      assert(i<199,'Page did not load: '+url);await delay(20);
     }
-    assert(await evaluate("location.href") === url, 'Guide loaded at the wrong URL');
-    assert(await evaluate("document.documentElement.scrollWidth <= innerWidth"), 'Guide has horizontal overflow: ' + url);
-    assert(await evaluate("[...document.images].every(img => img.complete && img.naturalWidth > 0)"), 'Guide image did not load: ' + url);
+  };
+  const assertLayout=async label => {
+    const layout=await evaluate("({width:innerWidth,content:document.documentElement.scrollWidth,broken:[...document.images].some(i=>!i.complete||i.naturalWidth===0),switcher:(()=>{const el=document.querySelector('.language-switch');if(!el)return false;const rect=el.getBoundingClientRect();return rect.width>0 && rect.height>0 && rect.left>=0 && rect.right<=innerWidth;})()})");
+    assert(layout.content<=layout.width,label+' horizontal overflow: '+JSON.stringify(layout));
+    assert(!layout.broken,label+' broken image');
+    assert(layout.switcher,label+' language switcher not visible');
+  };
+  const checkLanguageSwitch=async (url,locale) => {
+    const other=locale==='ja'?'en':'ja';
+    const pathname=new URL(url).pathname;
+    const counterpart=locale==='ja'?'/en'+pathname:pathname.slice(3);
+    const expected=origin+counterpart;
+    assert.equal(await evaluate("document.querySelector('.language-switch a[lang='+"+JSON.stringify(locale)+"+']').getAttribute('aria-current')"),'page','Current language is not marked');
+    await evaluate("document.querySelector('.language-switch a[lang='+"+JSON.stringify(other)+"+']').click()");
+    for(let i=0;i<200;i++) {
+      if(await evaluate("location.href==="+JSON.stringify(expected)+" && document.readyState==='complete' && document.documentElement.lang==="+JSON.stringify(other))) break;
+      assert(i<199,'Language switch did not navigate: '+url);await delay(20);
+    }
+    assert.equal(await evaluate("document.querySelector('.language-switch a[lang='+"+JSON.stringify(other)+"+']').getAttribute('aria-current')"),'page');
+    await assertLayout('Switched page '+counterpart);
+    await evaluate("document.querySelector('.language-switch a[lang='+"+JSON.stringify(locale)+"+']').click()");
+    for(let i=0;i<200;i++) {
+      if(await evaluate("location.href==="+JSON.stringify(url)+" && document.readyState==='complete' && document.documentElement.lang==="+JSON.stringify(locale))) break;
+      assert(i<199,'Language switch did not return: '+url);await delay(20);
+    }
+  };
+  for(const [locale,prefix] of [['ja',''],['en','/en']]) {
+    const homepage=origin+prefix+'/';
+    await navigate(homepage,'.hero-shot');
+    for(const [name,width,height] of [['desktop',1440,1100],['tablet',820,1000],['mobile',390,844],['small',320,750]]) {
+      await call('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false});
+      await delay(100);
+      await assertLayout(locale+' '+name);
+      const capture=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,clip:{x:0,y:0,width,height:await evaluate('document.documentElement.scrollHeight'),scale:1}});
+      fs.writeFileSync(path.join(output,(locale==='en'?'en-':'')+name+'.png'),Buffer.from(capture.data,'base64'));
+    }
+    const screenshots=await evaluate("[...document.querySelectorAll('.screenshot img')].map(img=>({width:img.naturalWidth,height:img.naturalHeight,source:img.src,link:img.parentElement.href}))");
+    assert.equal(screenshots.length,3);
+    assert(screenshots.some(image=>new URL(image.source).pathname==='/screenshots/vrm-avatar.jpg'),'VRM screenshot missing');
+    for(const image of screenshots) {
+      assert(image.width>0 && image.height>0,'Screenshot did not load');
+      assert.equal(image.link,image.source,'Screenshot must link to original image');
+    }
+    await evaluate("document.querySelector('summary').click()");
+    assert(await evaluate("document.querySelector('details').open"),'FAQ did not open');
+    await evaluate("document.querySelector('summary').click()");
+    assert(!await evaluate("document.querySelector('details').open"),'FAQ did not close');
+    const guides=await evaluate("[...document.querySelectorAll('#start .guide-links a')].map(a=>a.href)");
+    assert.equal(guides.length,4,'Expected three guides and help');
+    await checkLanguageSwitch(homepage,locale);
+    for(const url of guides) {
+      await navigate(url,'.guide h1');
+      assert.equal(await evaluate('document.documentElement.lang'),locale,'Guide language mismatch');
+      await assertLayout(locale+' guide '+url);
+      await checkLanguageSwitch(url,locale);
+    }
   }
   assert.deepEqual(errors,[]);
-  console.log('PASS: 4 viewport widths, no overflow, screenshots and original image links, FAQ, mobile guides, no script errors.');
+  console.log('PASS: Japanese and English at 4 viewport widths, visible working language switches, screenshots and original links, FAQ, all mobile guides/help, no script errors.');
   await call('Browser.close').catch(()=>{});await exited;
 }finally{
   socket?.close();

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="Send a PSD or VRM avatar from V Lens to OBS Studio. Add V Lens Camera, use chroma key, or preserve transparency with Spout2.">
+  <link rel="canonical" href="https://vlens.studiojuh.com/en/guides/obs-virtual-camera/">
+  <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/">
+  <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/obs-virtual-camera/">
+  <link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/obs-virtual-camera/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/en/guides/obs-virtual-camera/">
+  <meta property="og:title" content="Show your VTuber avatar in OBS | V Lens">
+  <meta property="og:description" content="Send a PSD or VRM avatar from V Lens to OBS Studio. Add V Lens Camera, use chroma key, or preserve transparency with Spout2.">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
+  <meta property="og:image:alt" content="V Lens output monitor with virtual camera, background color and resolution settings">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Show your VTuber avatar in OBS | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/en/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><a href="/guides/obs-virtual-camera/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="/en/guides/obs-virtual-camera/" lang="en" hreflang="en" aria-current="page">EN</a></div><a class="header-link" href="/en/#download">Download</a></div>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <p class="guide-back"><a href="/en/#start">All guides</a></p>
+    <h1>Show your VTuber avatar in OBS</h1>
+    <p class="guide-lead">Send a PSD or VRM avatar from V Lens to OBS Studio. Add V Lens Camera, use chroma key, or preserve transparency with Spout2.</p>
+    <p>The app interface is currently in Japanese. The instructions below include the Japanese menu and control labels.</p>
+    <figure class="screenshot guide-shot">
+      <a href="/screenshots/output-monitor.jpg"><img src="/screenshots/output-monitor.jpg" width="1052" height="830" alt="V Lens output monitor with virtual camera, background color and resolution settings"></a>
+      <figcaption>Output settings in version 0.1.36. “VCam” in the screenshot is the virtual camera’s former name.</figcaption>
+    </figure>
+    <h2>Add V Lens Camera to OBS</h2>
+    <ol>
+      <li>Open a PSD, VRM or built-in sample in V Lens. Set the output destination to Virtual camera (<span lang="ja">仮想カメラ</span>) and click Start output (<span lang="ja">出力を開始</span>).</li>
+      <li>In OBS Studio, add a <strong>Video Capture Device</strong> in <strong>Sources</strong> and select <strong>V Lens Camera</strong> from the device list.</li>
+      <li>Once the video appears, adjust its size and position in the scene. Configure the microphone for your stream separately in OBS.</li>
+    </ol>
+    <p>If your OBS source used “VCam” in version 0.1.39 or earlier, select “V Lens Camera” again after updating.</p>
+    <h2>Use chroma key or transparent output</h2>
+    <p>For virtual camera output, set Background (<span lang="ja">背景</span>) to green or blue in V Lens. Add a <strong>Chroma Key</strong> filter to the video source in OBS and choose the same key color.</p>
+    <p>To preserve partial transparency, install a compatible Spout2 plugin for OBS and set the output destination in V Lens to Spout2 (transparent) (<span lang="ja">Spout2（透過）</span>). Add <strong>Spout2 Capture</strong> in OBS and choose <strong>V Lens</strong> as the sender. Run OBS with Direct3D 11 and use the same GPU as V Lens.</p>
+    <p><a href="https://github.com/Off-World-Live/obs-spout2-plugin/releases">Download the Spout2 plugin for OBS</a></p>
+    <h2>If V Lens Camera is missing from the device list</h2>
+    <p>Wait until V Lens shows Output running (<span lang="ja">出力中</span>), then reopen the device list in OBS. If the virtual camera is not registered, run the Windows installer and approve the virtual camera registration.</p>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 id="related-title">Related guides</h2>
+      <ul class="guide-links">
+        <li><a href="/en/guides/psd-lip-sync/">Set up PSD lip sync and blinking</a></li>
+        <li><a href="/en/guides/vrm-face-tracking/">Track a VRM avatar’s face, body and fingers</a></li>
+      </ul>
+      <a class="button" href="/en/#download">Download V Lens</a>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/en/">V Lens</a><a class="header-link" href="/en/help/">Help</a><small>© studio-juh</small></footer>
+</body>
+</html>

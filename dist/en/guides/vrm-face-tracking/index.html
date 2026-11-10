@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.">
+  <link rel="canonical" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
+  <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
+  <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
+  <link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
+  <meta property="og:title" content="Track a VRM avatar’s face, body and fingers | V Lens">
+  <meta property="og:description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
+  <meta property="og:image:alt" content="V Lens 0.1.69 displaying the built-in Sendagaya Shino VRM sample">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Track a VRM avatar’s face, body and fingers | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/en/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><a href="/guides/vrm-face-tracking/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="/en/guides/vrm-face-tracking/" lang="en" hreflang="en" aria-current="page">EN</a></div><a class="header-link" href="/en/#download">Download</a></div>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <p class="guide-back"><a href="/en/#start">All guides</a></p>
+    <h1>Track a VRM avatar’s face, body and fingers</h1>
+    <p class="guide-lead">Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.</p>
+    <p>The app interface is currently in Japanese. The instructions below include the Japanese menu and control labels.</p>
+    <figure class="screenshot guide-shot">
+      <a href="/screenshots/vrm-avatar.jpg"><img src="/screenshots/vrm-avatar.jpg" width="1250" height="850" alt="V Lens 0.1.69 displaying Sendagaya Shino beside the output and display controls"></a>
+      <figcaption>The built-in <a href="https://hub.vroid.com/characters/4593660874193246717/models/7956589129305596116">Sendagaya Shino</a> VRM sample in V Lens 0.1.69, displayed without a camera. Model by pixiv (CC0); VRM 1.0 conversion by Coatie (Koh-Tee).</figcaption>
+    </figure>
+    <p>To try a model before preparing your own VRM, open File (<span lang="ja">ファイル</span>) → Built-in samples (<span lang="ja">内蔵サンプル</span>) → Sendagaya Shino (VRM) (<span lang="ja">千駄ヶ谷 篠（VRM）</span>).</p>
+    <h2>Connect a VRM avatar to your webcam</h2>
+    <ol>
+      <li>Load a VRM 0.x or VRM 1.0 file with Open model… (<span lang="ja">モデルを開く…</span>).</li>
+      <li>Stop output, open Settings (<span lang="ja">設定</span>) → Camera tracking… (<span lang="ja">カメラトラッキング…</span>), and choose your webcam. Turn on Link face and body to camera (<span lang="ja">顔・身体をカメラに連動</span>).</li>
+      <li>Click Start preview (<span lang="ja">プレビュー開始</span>), face forward, and choose Use current orientation as reference (<span lang="ja">現在の向きを基準にする</span>). Check head movement and blinking, apply the settings, then start output.</li>
+    </ol>
+    <h2>Adjust head movement, gaze and lip sync</h2>
+    <p>Head movement, gaze and blinking are applied to the bones and expressions supported by the model. For movement that behaves like a mirror, choose Mirror (<span lang="ja">鏡</span>) under Movement mapping (<span lang="ja">動きの対応</span>) in the camera tracking settings.</p>
+    <p>Lip sync has five blend positions, from Audio only (<span lang="ja">音声のみ</span>) to Camera only (<span lang="ja">カメラのみ</span>). You can use your microphone for the mouth while using the webcam for blinking and head movement. Choose Natural face and upper-body movement (<span lang="ja">顔＋上半身の自然な連動</span>) to let the neck and shoulders follow along.</p>
+    <h2 id="body-mode">Use body and finger tracking (experimental)</h2>
+    <p>Stop output and open the camera tracking settings. Choose a mode under VRM body (<span lang="ja">VRMの身体</span>), then click Apply and save (<span lang="ja">適用して保存</span>).</p>
+    <ul>
+      <li><strong>Face only (<span lang="ja">顔のみ</span>)</strong> — Links head orientation, blinking and lip sync.</li>
+      <li><strong>Natural face and upper-body movement (default) (<span lang="ja">顔＋上半身の自然な連動</span>)</strong> — Lets the neck, chest and shoulders follow head movement gently.</li>
+      <li><strong>Full-body and finger tracking (experimental) (<span lang="ja">全身・手指トラッキング（試験）</span>)</strong> — Tracks body orientation, arms and legs, palms and wrists, and individual fingers on both hands. The model needs the corresponding bones.</li>
+    </ul>
+    <p>For full-body movement, keep your head and feet in the frame and make sure your hands are large enough for the fingers to be visible. When the camera supports it, full-body mode uses input close to 720p and crops around the hands for finger detection. Head movement is processed separately from body and hand tracking. Speed and accuracy depend on your camera, PC, lighting and how large your hands appear.</p>
+    <h2 id="hand-stability">Reduce false hand detections</h2>
+    <p>In full-body mode, Hand tracking (<span lang="ja">手の追跡</span>) lets you choose between faster response and more stable detection. Stop output before changing it, then click Apply and save (<span lang="ja">適用して保存</span>).</p>
+    <ul>
+      <li><strong>Fast response (<span lang="ja">反応優先</span>)</strong> — Applies hand movement without an extra confirmation wait.</li>
+      <li><strong>Balanced (default) (<span lang="ja">バランス</span>)</strong> — Confirms the same hand in two consecutive frames before applying it. At 30 FPS input, the extra confirmation wait is about 33 ms.</li>
+      <li><strong>Stability first (<span lang="ja">安定優先</span>)</strong> — Confirms the hand across four consecutive frames. At 30 FPS input, it allows about 100 ms of extra confirmation wait to reduce brief false detections.</li>
+    </ul>
+    <p>These are approximate extra waits when a hand is newly detected or its position or orientation changes sharply. A continuously tracked hand does not receive the same fixed delay on every update. Face tracking is unaffected.</p>
+    <h2>When an elbow or hand is hidden</h2>
+    <p>If the shoulder and wrist remain visible while the elbow is hidden, V Lens estimates the elbow using wrist motion and palm orientation. When an arm’s position or rotation is uncertain, it favors a relaxed A-pose with the arm slightly lowered. Forearm twist and wrist tilt are handled separately to reduce abrupt flips and unnatural bends.</p>
+    <p>During a brief tracking loss, the previous pose is held. If the loss continues, the arm and fingers gradually return to a relaxed pose. Full-body tracking, including this pose completion, is experimental. A single camera cannot accurately recover the position and rotation of every hidden joint; overlap and movement outside the frame can still cause errors.</p>
+    <h2 id="preview">Check face, body and finger detections</h2>
+    <p>Choose Start preview (<span lang="ja">プレビュー開始</span>) → Mosaic video + landmarks (<span lang="ja">モザイク映像＋ランドマーク</span>). In full-body mode, the face landmarks are joined by a blue body skeleton, orange left-hand joints and purple right-hand joints. Left and right refer to the person in front of the camera. Detected hands are also displayed when the face or body is not visible.</p>
+    <p>3D face (<span lang="ja">顔の3D</span>) is a face-only 3D view. Raw camera video is not displayed. The mosaic view overlays detections from the same captured camera frame.</p>
+    <h2>If the face is not detected or the forward direction drifts</h2>
+    <p>Keep your entire face in the camera’s view and check the landmarks. Once your face is detected, choose Use current orientation as reference (<span lang="ja">現在の向きを基準にする</span>) while facing forward comfortably. During output, you can also use Recenter (<span lang="ja">正面合わせ</span>) on the monitor. If head movement is too large, stop output and reduce the angle limits.</p>
+    <p>GLB and FBX models can also be loaded. Supported movements depend on the model’s skeleton and expression data. For a PSD avatar, camera tracking can tilt the flat image and drive its eye layers.</p>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 id="related-title">Related guides</h2>
+      <ul class="guide-links">
+        <li><a href="/en/guides/psd-lip-sync/">Set up PSD lip sync and blinking</a></li>
+        <li><a href="/en/guides/obs-virtual-camera/">Send your avatar to OBS with a virtual camera or Spout2</a></li>
+      </ul>
+      <a class="button" href="/en/#download">Download V Lens</a>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/en/">V Lens</a><a class="header-link" href="/en/help/">Help</a><small>© studio-juh</small></footer>
+</body>
+</html>

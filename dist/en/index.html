@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.">
+  <link rel="canonical" href="https://vlens.studiojuh.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/">
+  <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/en/">
+  <meta property="og:title" content="V Lens | Virtual Camera, PSD Lip Sync &amp; VRM Tracking">
+  <meta property="og:description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/output-monitor.jpg">
+  <meta property="og:image:alt" content="V Lens output monitor and virtual camera settings">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>V Lens | Virtual Camera, PSD Lip Sync &amp; VRM Tracking</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://vlens.studiojuh.com/en/#website",
+        "name": "V Lens",
+        "url": "https://vlens.studiojuh.com/en/",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "V Lens",
+        "url": "https://vlens.studiojuh.com/en/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Windows 11 (x64)",
+        "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.",
+        "screenshot": "https://vlens.studiojuh.com/screenshots/output-monitor.jpg",
+        "publisher": { "@type": "Organization", "name": "studio-juh" }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#start">Get started</a>
+        <a href="#faq">FAQ</a>
+        <a href="/en/help/">Help</a>
+      </nav>
+      <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><a href="/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="/en/" lang="en" hreflang="en" aria-current="page">EN</a></div><a class="header-link" href="#download">Download</a></div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="platform">For Windows 11 (x64)</p>
+        <h1 id="hero-title">V Lens</h1>
+        <p class="hero-lead">Bring your avatar to your first stream.<br>A virtual camera for PSD and VRM</p>
+        <p class="hero-description">Load a 2D or 3D avatar, add lip sync from your microphone and face tracking from your webcam, and try body and finger tracking. Send your avatar to OBS or video calls.</p>
+        <a class="button" href="#download">Download</a>
+      </div>
+      <figure class="screenshot hero-shot">
+        <a href="/screenshots/output-monitor.jpg">
+          <img src="/screenshots/output-monitor.jpg" width="1052" height="830" alt="V Lens with its built-in PSD sample, output preview, lip sync controls and virtual camera settings">
+        </a>
+        <figcaption>Built-in PSD sample in version 0.1.36. “VCam” is the former virtual camera name.</figcaption>
+      </figure>
+    </section>
+
+    <section class="wrap features" id="features" aria-labelledby="features-title">
+      <h2 id="features-title">Lip sync and tracking for your avatar</h2>
+      <div class="feature-main">
+        <figure class="screenshot">
+          <a href="/screenshots/psd-editor.jpg">
+            <img src="/screenshots/psd-editor.jpg" width="1052" height="830" alt="PSD editor in V Lens showing layers and mouth shape assignments">
+          </a>
+          <figcaption>Use the built-in sample to try assigning layers to mouth shapes.</figcaption>
+        </figure>
+        <div class="feature-copy">
+          <h3>Simple lip sync for PSD artwork</h3>
+          <p>Assign your PSD’s eye and mouth layers. Choose three mouth states or the Japanese vowel shapes a, i, u, e and o, and switch expressions with shortcuts.</p>
+          <h3>Face tracking with a webcam</h3>
+          <p>VRM 0.x and 1.0 are supported. Follow head direction, blinks and gaze with your webcam. You can also load GLB and FBX models.</p>
+          <h3>Body and individual fingers (experimental)</h3>
+          <p>Full-body mode follows your body, palms, wrists and each finger. Choose the stability setting if you see false hand detections. Hidden elbows are estimated. When arm tracking is lost, the arms ease back to a relaxed pose. <a href="/en/guides/vrm-face-tracking/">Setup and limitations</a></p>
+        </div>
+      </div>
+      <div class="feature-main feature-vrm">
+        <div class="feature-copy">
+          <h3>Try a 3D avatar with the built-in sample</h3>
+          <p>No VRM model yet? Try Sendagaya Shino from File → Built-in samples (ファイル → 内蔵サンプル).</p>
+          <p>Once your model is displayed, set up audio lip sync or webcam tracking. <a href="/en/guides/vrm-face-tracking/">VRM setup guide</a></p>
+        </div>
+        <figure class="screenshot vrm-shot">
+          <a href="/screenshots/vrm-avatar.jpg"><img src="/screenshots/vrm-avatar.jpg" width="1250" height="850" alt="V Lens 0.1.69 showing the built-in Sendagaya Shino VRM avatar alongside output and display controls"></a>
+          <figcaption>Built-in VRM sample <a href="https://hub.vroid.com/characters/4593660874193246717/models/7956589129305596116">Sendagaya Shino</a> in V Lens 0.1.69, shown without a webcam. Model by pixiv (CC0); VRM 1.0 conversion by Coatie (Koh-Tee).</figcaption>
+        </figure>
+      </div>
+      <div class="feature-list">
+        <article>
+          <h3>Lip sync from audio</h3>
+          <p>Use microphone or desktop audio, with RNNoise, speech detection, and presets for conversation or singing.</p>
+        </article>
+        <article>
+          <h3>Virtual camera and transparent output for OBS</h3>
+          <p>Send video through “V Lens Camera” and change its background while running. Choose Spout2 to preserve transparency when compositing in OBS.</p>
+        </article>
+        <article>
+          <h3>See what tracking detects</h3>
+          <p>Preview face landmarks, the body skeleton and finger joints over a heavily pixelated image. Body and hand overlays are available in full-body mode. The app does not display raw webcam footage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="start" aria-labelledby="start-title">
+      <div class="wrap start-layout">
+        <div>
+          <h2 id="start-title">Start your first avatar stream</h2>
+          <p>New to VTubing? Start by moving a built-in sample with your microphone.</p>
+          <ul class="guide-links">
+            <li><a href="/en/guides/psd-lip-sync/">Set up PSD lip sync and blinking</a></li>
+            <li><a href="/en/guides/vrm-face-tracking/">Track a VRM avatar’s face, body and fingers</a></li>
+            <li><a href="/en/guides/obs-virtual-camera/">Add virtual camera or transparent video to OBS</a></li>
+            <li><a href="/en/help/">Help and troubleshooting</a></li>
+          </ul>
+        </div>
+        <ol class="steps">
+          <li><h3>Open your content</h3><p>Choose a PSD, 3D model, image or video. Built-in samples are in the File (ファイル) menu.</p></li>
+          <li><h3>Set up audio and tracking</h3><p>Choose the lip sync source. To follow your movements, configure webcam tracking.</p></li>
+          <li><h3>Start output</h3><p>Select “V Lens Camera” in the receiving app. For Spout2 in OBS, add “Spout2 Capture” and select “V Lens”.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wrap faq" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details><summary>Which operating systems are supported?</summary><p>Windows 11 (x64). Registering the virtual camera requires administrator approval.</p></details>
+        <details><summary>Can I try it without my own avatar?</summary><p>Yes. Built-in PSD samples let you try lip sync, blinking and expression switching. There is also a built-in VRM sample. To use your own avatar, load a layered PSD or a supported 3D model.</p></details>
+        <details><summary>Do I need a webcam?</summary><p>Audio lip sync, automatic blinking, and image or video output work without a webcam. Webcam tracking is needed to follow your face, gaze, body or hands.</p></details>
+        <details><summary>What if a hand is detected incorrectly?</summary><p>In full-body mode, choose Balanced or Stability first under Hand tracking. These settings confirm detections across several frames; Stability first allows a little more confirmation time. <a href="/en/guides/vrm-face-tracking/#hand-stability">Compare the settings</a>.</p></details>
+        <details><summary>Will every model move the same way?</summary><p>Expressions and movement depend on the bones and morphs included in your model. Full-body tracking is experimental.</p></details>
+        <details><summary>Does output include audio?</summary><p>Output is video only. Set up the audio for your stream in OBS or your calling app.</p></details>
+        <details><summary>Is the app interface in English?</summary><p>The app interface and screenshots are currently in Japanese. The English guides include Japanese menu labels to help you find the controls.</p></details>
+      </div>
+    </section>
+
+    <section class="wrap download" id="download" aria-labelledby="download-title">
+      <h2 id="download-title">Download</h2>
+      <p>V Lens 0.1.69 · NSIS installer for Windows 11 (x64)</p>
+      <div class="download-actions">
+        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.69/V-Lens_0.1.69_x64-setup.exe">Download installer</a>
+        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.69">Release notes (Japanese)</a>
+      </div>
+      <p class="download-notice">The app interface is currently in Japanese. The installer is unsigned, so Windows may show a security warning when you open it.</p>
+      <details class="install-help" id="windows-protection">
+        <summary>If Windows shows a warning</summary>
+        <p>Make sure you downloaded the file through this official site. You can compare its SHA-256 hash with the release notes. On a work or school PC, check with your administrator before changing settings.</p>
+        <h3>Microsoft Defender SmartScreen</h3>
+        <p>If “Windows protected your PC” appears, open “More info”. If “Run anyway” is available, it lets you run that installer.</p>
+        <p>SmartScreen settings are in Windows Security → App &amp; browser control → Reputation-based protection settings → Check apps and files. If you temporarily turn this protection off, turn it back on after installation.</p>
+        <p><a href="https://support.microsoft.com/en-us/windows/security/windows-security/app-browser-control-in-the-windows-security-app">Microsoft’s SmartScreen guidance</a></p>
+        <h3>Smart App Control</h3>
+        <p>Smart App Control does not provide an exception for an individual app. Its setting is in Windows Security → App &amp; browser control → Smart App Control settings.</p>
+        <p>Turning it off disables this protection for the whole PC. Whether you can turn it back on in Settings depends on your Windows version and configuration; a reset or Windows reinstall may be required. Check Microsoft’s current guidance before changing it.</p>
+        <p><a href="https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions">Microsoft’s Smart App Control FAQ</a></p>
+      </details>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="#top"><img src="/favicon.svg" width="26" height="26" alt="">V Lens</a><a class="header-link" href="/en/help/">Help</a><small>© studio-juh</small></footer>
+</body>
+</html>

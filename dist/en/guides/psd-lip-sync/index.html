@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101319">
+  <meta name="description" content="Animate a PSD avatar with your microphone in V Lens. Set up mouth and eye layers, try the built-in sample, and choose three-state or Japanese vowel lip sync.">
+  <link rel="canonical" href="https://vlens.studiojuh.com/en/guides/psd-lip-sync/">
+  <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/psd-lip-sync/">
+  <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/psd-lip-sync/">
+  <link rel="alternate" hreflang="x-default" href="https://vlens.studiojuh.com/guides/psd-lip-sync/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="V Lens">
+  <meta property="og:url" content="https://vlens.studiojuh.com/en/guides/psd-lip-sync/">
+  <meta property="og:title" content="Set up PSD lip sync and blinking | V Lens">
+  <meta property="og:description" content="Animate a PSD avatar with your microphone in V Lens. Set up mouth and eye layers, try the built-in sample, and choose three-state or Japanese vowel lip sync.">
+  <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/psd-editor.jpg">
+  <meta property="og:image:alt" content="V Lens PSD settings showing layers and Japanese vowel mouth shapes">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Set up PSD lip sync and blinking | V Lens</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="/en/"><img src="/favicon.svg" width="32" height="32" alt="">V Lens</a>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><a href="/guides/psd-lip-sync/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><a href="/en/guides/psd-lip-sync/" lang="en" hreflang="en" aria-current="page">EN</a></div><a class="header-link" href="/en/#download">Download</a></div>
+  </div></header>
+  <main class="wrap guide" id="main">
+    <p class="guide-back"><a href="/en/#start">All guides</a></p>
+    <h1>Set up PSD lip sync and blinking</h1>
+    <p class="guide-lead">Animate a PSD avatar with your microphone in V Lens. Set up mouth and eye layers, try the built-in sample, and choose three-state or Japanese vowel lip sync.</p>
+    <p>The app interface is currently in Japanese. The instructions below include the Japanese menu and control labels.</p>
+    <figure class="screenshot guide-shot">
+      <a href="/screenshots/psd-editor.jpg"><img src="/screenshots/psd-editor.jpg" width="1052" height="830" alt="V Lens PSD settings showing layers and Japanese vowel mouth shapes"></a>
+      <figcaption>The built-in PSD sample with the “a” mouth shape selected.</figcaption>
+    </figure>
+    <h2>Try lip sync with a built-in sample</h2>
+    <ol>
+      <li>Open File (<span lang="ja">ファイル</span>) → Built-in samples (<span lang="ja">内蔵サンプル</span>) → Quick setup (three mouth shapes) (<span lang="ja">簡単セットアップ（3段階）</span>). Closed, half-open and open mouth layers, plus automatic blinking, are already assigned.</li>
+      <li>Under Audio / Lip sync (<span lang="ja">音声・リップシンク</span>), select Microphone (<span lang="ja">マイク</span>) and your usual input device.</li>
+      <li>Click Start output (<span lang="ja">出力を開始</span>) and speak. Watch the output monitor and adjust Mouth opening volume (<span lang="ja">口を開く音量</span>) to set when the mouth opens.</li>
+    </ol>
+    <h2>Animate your own PSD avatar</h2>
+    <p>Prepare an 8-bit RGB PSD with separate layers for mouth and eye variations. Load it with Open PSD… (<span lang="ja">PSDを開く…</span>), select a mouth shape or eye state, then assign the matching layer.</p>
+    <p>Choose Three mouth states (<span lang="ja">3段階</span>) for closed, half-open and open shapes, or Japanese vowels (vowel estimation) (<span lang="ja">あいうえお（母音推定）</span>) for separate a, i, u, e and o shapes. Assign open and closed eye layers to enable automatic blinking. Expression presets let you switch to a smile or other expression with shortcuts during output.</p>
+    <h2>If the mouth does not respond well</h2>
+    <p>Check the audio meter to confirm that sound is reaching the app. For quiet speech or vocals over background music, try the Quiet voice / vocals with BGM (<span lang="ja">小声・BGMありボーカル</span>) preset. If vowel detection has trouble with your voice, open Settings (<span lang="ja">設定</span>) → Adjust vowel estimation… (<span lang="ja">母音推定を調整…</span>) and record a, i, u, e and o in your normal voice.</p>
+    <p>To move the assignments to another PC, use File (<span lang="ja">ファイル</span>) → Save PSD settings… (<span lang="ja">PSD設定を保存…</span>) to save a JSON file. Copy the original PSD along with it.</p>
+    <section class="guide-related" aria-labelledby="related-title">
+      <h2 id="related-title">Related guides</h2>
+      <ul class="guide-links">
+        <li><a href="/en/guides/vrm-face-tracking/">Track a VRM avatar’s face, body and fingers</a></li>
+        <li><a href="/en/guides/obs-virtual-camera/">Send your avatar to OBS with a virtual camera or Spout2</a></li>
+      </ul>
+      <a class="button" href="/en/#download">Download V Lens</a>
+    </section>
+  </main>
+  <footer class="wrap site-footer"><a class="brand" href="/en/">V Lens</a><a class="header-link" href="/en/help/">Help</a><small>© studio-juh</small></footer>
+</body>
+</html>

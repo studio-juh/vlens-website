@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://vlens.studiojuh.com/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/psd-lip-sync/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/vrm-face-tracking/</loc></url>
-  <url><loc>https://vlens.studiojuh.com/guides/obs-virtual-camera/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/en/</loc></url>
   <url><loc>https://vlens.studiojuh.com/help/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/en/help/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/guides/psd-lip-sync/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/en/guides/psd-lip-sync/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/guides/vrm-face-tracking/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/en/guides/vrm-face-tracking/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/guides/obs-virtual-camera/</loc></url>
+  <url><loc>https://vlens.studiojuh.com/en/guides/obs-virtual-camera/</loc></url>
 </urlset>
