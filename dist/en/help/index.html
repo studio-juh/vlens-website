@@ -116,6 +116,7 @@
     <section id="install" aria-labelledby="install-title">
       <h2 id="install-title">Install and update</h2>
       <p>In the NSIS edition from 0.1.70 onward, choose Help (ヘルプ) → Check for updates (アップデートを確認…) to check manually. V Lens verifies the installer signature, then saves settings and stops output before installation. If you use 0.1.69 or earlier, install this update manually first.</p>
+      <p>From 0.1.73, the app downloads eligible updates of at least 8 MiB in up to eight parallel parts. If segmented downloading is unavailable or fails, it returns to a normal download. Both paths verify the completed file’s signature. Downloading 0.1.73 from 0.1.72 or earlier still uses the older method.</p>
       <p>V Lens runs on Windows 11 (x64). Before updating, close the app with File (ファイル) → Exit (終了). Run the installer and approve the administrator prompt to register the virtual camera, then launch V Lens from the Start menu.</p>
       <ul class="guide-links">
         <li><a href="/en/#download">Download for Windows</a></li>
@@ -126,6 +127,7 @@
     <section id="output" aria-labelledby="output-title">
       <h2 id="output-title">Output and OBS</h2>
       <p>To try the app, open File (ファイル) → Built-in samples (内蔵サンプル) → Simple setup, three mouth shapes (簡単セットアップ（3段階）). At the bottom of the right panel, set Output destination (出力先) to Virtual camera (仮想カメラ), then click Start output (出力を開始) directly below it.</p>
+      <p>While outputting a PSD or VRM, you can switch models, built-in samples and configured PSDs. The current connection, output format and audio settings remain in use; if preparation fails, the previous avatar continues. <a href="/en/guides/psd-lip-sync/#switch-during-output">First-time PSD setup and switching requirements</a></p>
       <p id="camera-name">Since version 0.1.40, the virtual camera is named “V Lens Camera.” If OBS or your calling app still uses the old “VCam” device, start output in V Lens and select the camera again. Some Windows lists display it as “V Lens Camera (Windows 仮想カメラ).”</p>
       <div class="faq-list">
         <details>
@@ -171,6 +173,7 @@
     <section id="tracking" aria-labelledby="tracking-title">
       <h2 id="tracking-title">Face, body and finger tracking</h2>
       <p>Load a model, stop output, then open Settings (設定) → Camera tracking (カメラトラッキング…). Select your webcam and enable tracking. Click Start preview (プレビュー開始) to check detection. In full-body mode, Mosaic video + landmarks (モザイク映像＋ランドマーク) also shows the body skeleton and joints of both hands.</p>
+      <p>During output, you can change the camera tracking toggle and click Apply and save (<span lang="ja">適用して保存</span>). Stop output to change the camera, angles, body mode, CPU/GPU or other tracking settings.</p>
       <div class="faq-list">
         <details>
           <summary>My face is not detected, or the forward direction is wrong</summary>
