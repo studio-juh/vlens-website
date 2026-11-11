@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.">
+  <meta name="description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.">
   <link rel="canonical" href="https://vlens.studiojuh.com/en/">
   <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/">
   <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/">
@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/en/">
   <meta property="og:title" content="V Lens | Virtual Camera, PSD Lip Sync &amp; VRM Tracking">
-  <meta property="og:description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.">
+  <meta property="og:description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta property="og:image:alt" content="V Lens 0.1.69 showing the built-in Sendagaya Shino VRM avatar">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1250">
   <meta property="og:image:height" content="850">
   <meta name="twitter:title" content="V Lens | Virtual Camera, PSD Lip Sync &amp; VRM Tracking">
-  <meta name="twitter:description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.">
+  <meta name="twitter:description" content="V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.">
   <meta name="twitter:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta name="twitter:image:alt" content="V Lens 0.1.69 showing the built-in Sendagaya Shino VRM avatar">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -60,7 +60,7 @@
       "@id": "https://vlens.studiojuh.com/en/#webpage",
       "url": "https://vlens.studiojuh.com/en/",
       "name": "V Lens | Virtual Camera, PSD Lip Sync & VRM Tracking",
-      "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.",
+      "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://vlens.studiojuh.com/#website"
@@ -80,10 +80,10 @@
       "url": "https://vlens.studiojuh.com/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 11 (x64)",
-      "softwareVersion": "0.1.70",
+      "softwareVersion": "0.1.71",
       "inLanguage": "ja",
-      "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and experimental body and finger tracking, then send video to OBS or calls.",
-      "downloadUrl": "https://github.com/studio-juh/vlens-website/releases/download/v0.1.70/V-Lens_0.1.70_x64-setup.exe",
+      "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.",
+      "downloadUrl": "https://github.com/studio-juh/vlens-website/releases/download/v0.1.71/V-Lens_0.1.71_x64-setup.exe",
       "installUrl": "https://vlens.studiojuh.com/en/#download",
       "image": {
         "@type": "ImageObject",
@@ -149,7 +149,7 @@
           <p>Assign your PSD’s eye and mouth layers. Choose three mouth states or the Japanese vowel shapes a, i, u, e and o, and switch expressions with shortcuts.</p>
           <h3>Face tracking with a webcam</h3>
           <p>VRM 0.x and 1.0 are supported. Follow head direction, blinks and gaze with your webcam. You can also load GLB and FBX models.</p>
-          <h3>Body and individual fingers (experimental)</h3>
+          <h3>Body and individual fingers</h3>
           <p>Full-body mode follows your body, palms, wrists and each finger. Choose the stability setting if you see false hand detections. Hidden elbows are estimated. When arm tracking is lost, the arms ease back to a relaxed pose. <a href="/en/guides/vrm-face-tracking/">Setup and limitations</a></p>
         </div>
       </div>
@@ -207,7 +207,7 @@
         <details><summary>Can I try it without my own avatar?</summary><p>Yes. Built-in PSD samples let you try lip sync, blinking and expression switching. There is also a built-in VRM sample. To use your own avatar, load a layered PSD or a supported 3D model.</p></details>
         <details><summary>Do I need a webcam?</summary><p>Audio lip sync, automatic blinking, and image or video output work without a webcam. Webcam tracking is needed to follow your face, gaze, body or hands.</p></details>
         <details><summary>What if a hand is detected incorrectly?</summary><p>In full-body mode, choose Balanced or Stability first under Hand tracking. These settings confirm detections across several frames; Stability first allows a little more confirmation time. <a href="/en/guides/vrm-face-tracking/#hand-stability">Compare the settings</a>.</p></details>
-        <details><summary>Will every model move the same way?</summary><p>Expressions and movement depend on the bones and morphs included in your model. Full-body tracking is experimental.</p></details>
+        <details><summary>Will every model move the same way?</summary><p>Expressions and movement depend on the bones and morphs included in your model.</p></details>
         <details><summary>Does output include audio?</summary><p>Output is video only. Set up the audio for your stream in OBS or your calling app.</p></details>
         <details><summary>Is the app interface in English?</summary><p>The app interface and screenshots are currently in Japanese. The English guides include Japanese menu labels to help you find the controls.</p></details>
       </div>
@@ -215,10 +215,10 @@
 
     <section class="wrap download" id="download" aria-labelledby="download-title">
       <h2 id="download-title">Download</h2>
-      <p>V Lens 0.1.70 · NSIS installer for Windows 11 (x64)</p>
+      <p>V Lens 0.1.71 · NSIS installer for Windows 11 (x64)</p>
       <div class="download-actions">
-        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.70/V-Lens_0.1.70_x64-setup.exe">Download installer</a>
-        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.70">Release notes (Japanese)</a>
+        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.71/V-Lens_0.1.71_x64-setup.exe">Download installer</a>
+        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.71">Release notes (Japanese)</a>
       </div>
       <p class="download-notice">The app interface is currently in Japanese. The installer is unsigned, so Windows may show a security warning when you open it.</p>
       <details class="install-help" id="windows-protection">

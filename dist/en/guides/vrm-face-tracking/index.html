@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.">
+  <meta name="description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.">
   <link rel="canonical" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
   <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
   <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
   <meta property="og:title" content="VRM Webcam Tracking for Face, Body &amp; Fingers | V Lens">
-  <meta property="og:description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.">
+  <meta property="og:description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta property="og:image:alt" content="V Lens 0.1.69 displaying the built-in Sendagaya Shino VRM sample">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1250">
   <meta property="og:image:height" content="850">
   <meta name="twitter:title" content="VRM Webcam Tracking for Face, Body &amp; Fingers | V Lens">
-  <meta name="twitter:description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.">
+  <meta name="twitter:description" content="Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.">
   <meta name="twitter:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta name="twitter:image:alt" content="V Lens 0.1.69 displaying the built-in Sendagaya Shino VRM sample">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -60,7 +60,7 @@
       "@id": "https://vlens.studiojuh.com/en/guides/vrm-face-tracking/#webpage",
       "url": "https://vlens.studiojuh.com/en/guides/vrm-face-tracking/",
       "name": "VRM Webcam Tracking for Face, Body & Fingers | V Lens",
-      "description": "Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.",
+      "description": "Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://vlens.studiojuh.com/#website"
@@ -97,7 +97,7 @@
       "@type": "TechArticle",
       "@id": "https://vlens.studiojuh.com/en/guides/vrm-face-tracking/#article",
       "headline": "Track a VRM avatar’s face, body and fingers",
-      "description": "Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.",
+      "description": "Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.",
       "inLanguage": "en",
       "mainEntityOfPage": {
         "@id": "https://vlens.studiojuh.com/en/guides/vrm-face-tracking/#webpage"
@@ -129,7 +129,7 @@
   <main class="wrap guide" id="main">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/en/">V Lens</a></li><li aria-current="page">Track a VRM avatar’s face, body and fingers</li></ol></nav>
     <h1>Track a VRM avatar’s face, body and fingers</h1>
-    <p class="guide-lead">Set up webcam tracking for a VRM avatar in V Lens. Explore experimental body and finger tracking, hand stability settings, and landmark previews.</p>
+    <p class="guide-lead">Set up webcam tracking for a VRM avatar in V Lens. Explore body and finger tracking, hand stability settings, and landmark previews.</p>
     <p>The app interface is currently in Japanese. The instructions below include the Japanese menu and control labels.</p>
     <figure class="screenshot guide-shot">
       <a href="/screenshots/vrm-avatar.jpg"><picture><source type="image/webp" srcset="/screenshots/vrm-avatar-640.webp 640w, /screenshots/vrm-avatar-960.webp 960w, /screenshots/vrm-avatar-1250.webp 1250w" sizes="(max-width: 650px) calc(100vw - 32px), (max-width: 668px) calc(100vw - 48px), 620px"><img src="/screenshots/vrm-avatar.jpg" width="1250" height="850" alt="V Lens 0.1.69 displaying Sendagaya Shino beside the output and display controls" loading="eager" decoding="async" fetchpriority="high"></picture></a>
@@ -145,12 +145,12 @@
     <h2>Adjust head movement, gaze and lip sync</h2>
     <p>Head movement, gaze and blinking are applied to the bones and expressions supported by the model. For movement that behaves like a mirror, choose Mirror (<span lang="ja">鏡</span>) under Movement mapping (<span lang="ja">動きの対応</span>) in the camera tracking settings.</p>
     <p>Lip sync has five blend positions, from Audio only (<span lang="ja">音声のみ</span>) to Camera only (<span lang="ja">カメラのみ</span>). You can use your microphone for the mouth while using the webcam for blinking and head movement. Choose Natural face and upper-body movement (<span lang="ja">顔＋上半身の自然な連動</span>) to let the neck and shoulders follow along.</p>
-    <h2 id="body-mode">Use body and finger tracking (experimental)</h2>
+    <h2 id="body-mode">Use body and finger tracking</h2>
     <p>Stop output and open the camera tracking settings. Choose a mode under VRM body (<span lang="ja">VRMの身体</span>), then click Apply and save (<span lang="ja">適用して保存</span>).</p>
     <ul>
       <li><strong>Face only (<span lang="ja">顔のみ</span>)</strong> — Links head orientation, blinking and lip sync.</li>
       <li><strong>Natural face and upper-body movement (default) (<span lang="ja">顔＋上半身の自然な連動</span>)</strong> — Lets the neck, chest and shoulders follow head movement gently.</li>
-      <li><strong>Full-body and finger tracking (experimental) (<span lang="ja">全身・手指トラッキング（試験）</span>)</strong> — Tracks body orientation, arms and legs, palms and wrists, and individual fingers on both hands. The model needs the corresponding bones.</li>
+      <li><strong>Full-body and finger tracking (<span lang="ja">全身・手指トラッキング</span>)</strong> — Tracks body orientation, arms and legs, palms and wrists, and individual fingers on both hands. The model needs the corresponding bones.</li>
     </ul>
     <p>For full-body movement, keep your head and feet in the frame and make sure your hands are large enough for the fingers to be visible. When the camera supports it, full-body mode uses input close to 720p and crops around the hands for finger detection. Head movement is processed separately from body and hand tracking. Speed and accuracy depend on your camera, PC, lighting and how large your hands appear.</p>
     <h2 id="hand-stability">Reduce false hand detections</h2>
@@ -162,8 +162,8 @@
     </ul>
     <p>These are approximate extra waits when a hand is newly detected or its position or orientation changes sharply. A continuously tracked hand does not receive the same fixed delay on every update. Face tracking is unaffected.</p>
     <h2>When an elbow or hand is hidden</h2>
-    <p>If the shoulder and wrist remain visible while the elbow is hidden, V Lens estimates the elbow using wrist motion and palm orientation. When an arm’s position or rotation is uncertain, it favors a relaxed A-pose with the arm slightly lowered. Forearm twist and wrist tilt are handled separately to reduce abrupt flips and unnatural bends.</p>
-    <p>During a brief tracking loss, the previous pose is held. If the loss continues, the arm and fingers gradually return to a relaxed pose. Full-body tracking, including this pose completion, is experimental. A single camera cannot accurately recover the position and rotation of every hidden joint; overlap and movement outside the frame can still cause errors.</p>
+    <p>If the shoulder and wrist remain visible while the elbow is hidden, V Lens estimates the elbow using wrist motion and palm orientation. When an arm’s position or rotation is uncertain, it favors a relaxed A-pose with the arm slightly lowered. Forearm twist and wrist tilt are handled separately to reduce abrupt flips and unnatural bends. Shoulder angles are constrained to keep the upper arm and forearm in front of the torso when reaching across the body. This uses an approximate body boundary, so contact can remain with some model shapes or thick clothing.</p>
+    <p>During a brief tracking loss, the previous pose is held. If the loss continues, the arm and fingers gradually return to a relaxed pose. A single camera cannot accurately recover the position and rotation of every hidden joint; overlap and movement outside the frame can still cause errors.</p>
     <h2 id="preview">Check face, body and finger detections</h2>
     <p>Choose Start preview (<span lang="ja">プレビュー開始</span>) → Mosaic video + landmarks (<span lang="ja">モザイク映像＋ランドマーク</span>). In full-body mode, the face landmarks are joined by a blue body skeleton, orange left-hand joints and purple right-hand joints. Left and right refer to the person in front of the camera. Detected hands are also displayed when the face or body is not visible.</p>
     <p>3D face (<span lang="ja">顔の3D</span>) is a face-only 3D view. Raw camera video is not displayed. The mosaic view overlays detections from the same captured camera frame.</p>
