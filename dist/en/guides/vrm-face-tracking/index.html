@@ -153,6 +153,9 @@
       <li><strong>Full-body and finger tracking (<span lang="ja">全身・手指トラッキング</span>)</strong> — Tracks body orientation, arms and legs, palms and wrists, and individual fingers on both hands. The model needs the corresponding bones.</li>
     </ul>
     <p>For full-body movement, keep your head and feet in the frame and make sure your hands are large enough for the fingers to be visible. When the camera supports it, full-body mode uses input close to 720p and crops around the hands for finger detection. Head movement is processed separately from body and hand tracking. Speed and accuracy depend on your camera, PC, lighting and how large your hands appear.</p>
+    <h2 id="compute-device">Move body and hand processing to the GPU</h2>
+    <p>In 0.1.72, full-body mode adds Body and hand processing (<span lang="ja">身体・手の処理</span>). CPU is the default. To try GPU processing, stop output, choose Reduce CPU load with the GPU (<span lang="ja">GPUでCPU負荷を軽減</span>), and click Apply and save (<span lang="ja">適用して保存</span>). The preview uses your selected setting and shows whether the CPU or GPU is actually in use. Tracking continues on the CPU if the GPU is unavailable or processing fails.</p>
+    <p>Face tracking continues independently on the CPU. The GPU and CPU modes use different models, so their movements may differ. Results depend on the GPU, its driver, and other apps such as OBS or games sharing it.</p>
     <h2 id="hand-stability">Reduce false hand detections</h2>
     <p>In full-body mode, Hand tracking (<span lang="ja">手の追跡</span>) lets you choose between faster response and more stable detection. Stop output before changing it, then click Apply and save (<span lang="ja">適用して保存</span>).</p>
     <ul>
