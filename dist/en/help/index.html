@@ -172,11 +172,11 @@
 
     <section id="tracking" aria-labelledby="tracking-title">
       <h2 id="tracking-title">Face, body and finger tracking</h2>
-      <p>In 0.1.79, the right-hand Output tab (<span lang="ja">出力</span>) for PSD and VRM avatars has a switch below the expression selector to turn camera tracking on or off directly. It applies and saves the change immediately while stopped or during output. Click Camera tracking settings… (<span lang="ja">カメラトラッキング設定…</span>) for detailed settings. Settings (<span lang="ja">設定</span>) → Camera tracking… (<span lang="ja">カメラトラッキング…</span>) remains available.</p>
+      <p>In 0.1.80, the right-hand Output tab (<span lang="ja">出力</span>) for PSD and VRM avatars has a switch below the expression selector to turn camera tracking on or off directly. It applies and saves the change immediately while stopped or during output. Click Camera tracking settings… (<span lang="ja">カメラトラッキング設定…</span>) for detailed settings. Settings (<span lang="ja">設定</span>) → Camera tracking… (<span lang="ja">カメラトラッキング…</span>) remains available.</p>
       <p>Changes in the settings dialog apply immediately, without an Apply and save button (<span lang="ja">適用して保存</span>). Applied settings are saved when you close the dialog and when the app exits. If a change fails, the controls return to the actual settings and show an error. If saving fails, the dialog stays open so you can retry.</p>
       <p>Load a model, stop output, then open Settings (設定) → Camera tracking (カメラトラッキング…). Select your webcam and enable tracking. Click Start preview (プレビュー開始) to check detection. In full-body mode, Mosaic video + landmarks (モザイク映像＋ランドマーク) also shows the body skeleton and joints of both hands.</p>
       <p>During output, you can immediately change the tracking toggle, lip-sync input source, yaw/pitch/roll limits, VRM body mode and full-body preset in the dialog. Stop output to change the camera, movement mapping or CPU/GPU selection.</p>
-      <p>In 0.1.79, full-body quality and load are grouped into Preset (<span lang="ja">プリセット</span>) and Processing device (<span lang="ja">処理先</span>). LITE uses lightweight body and hand models; Balanced (<span lang="ja">バランス</span>, default) uses Body Lite and Hand Full; Heavy (<span lang="ja">ヘヴィ</span>) uses Body Heavy and Hand Full. Balanced and Heavy use the same two-inference hand confirmation. With GPU selected, Heavy still runs the body on the CPU while the hands can use the GPU. <a href="/en/guides/vrm-face-tracking/#body-quality">Choose a preset and processing device</a></p>
+      <p>In 0.1.80, full-body quality and load are grouped into Preset (<span lang="ja">プリセット</span>) and Processing device (<span lang="ja">処理先</span>). Light (lower load; <span lang="ja">ライト（軽さ優先）</span>) uses lightweight body and hand models; Balanced (recommended; <span lang="ja">バランス（おすすめ）</span>), the default, uses Body Lite and Hand Full; Heavy (prioritize body accuracy; <span lang="ja">ヘヴィ（身体の精度優先）</span>) uses Body Heavy and Hand Full. Balanced and Heavy use the same two-inference hand confirmation. With GPU selected, Heavy still runs the body on the CPU while the hands can use the GPU. <a href="/en/guides/vrm-face-tracking/#body-quality">Choose a preset and processing device</a></p>
       <div class="faq-list">
         <details>
           <summary>My face is not detected, or the forward direction is wrong</summary>
@@ -184,7 +184,7 @@
         </details>
         <details>
           <summary>Hands move suddenly or appear when they should not</summary>
-          <p>In full-body mode, choose the Balanced (<span lang="ja">バランス</span>) or Heavy (<span lang="ja">ヘヴィ</span>) preset to confirm new or reacquired hands and sudden changes across two compatible inferences, adding about 33 ms at 30 FPS inference. Keep the whole hand in view, with enough light and a distance that makes the fingers visible. Presets can also be changed during output.</p>
+          <p>In full-body mode, choose the Balanced (<span lang="ja">バランス（おすすめ）</span>) or Heavy (<span lang="ja">ヘヴィ（身体の精度優先）</span>) preset to confirm new or reacquired hands and sudden changes across two compatible inferences, adding about 33 ms at 30 FPS inference. Keep the whole hand in view, with enough light and a distance that makes the fingers visible. Presets can also be changed during output.</p>
         </details>
         <details>
           <summary>A hidden elbow or hand moves differently from my real arm</summary>
