@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101319">
-  <meta name="description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。">
+  <meta name="description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。">
   <link rel="canonical" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
   <link rel="alternate" hreflang="ja" href="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
   <link rel="alternate" hreflang="en" href="https://vlens.studiojuh.com/en/guides/vrm-face-tracking/">
@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="V Lens">
   <meta property="og:url" content="https://vlens.studiojuh.com/guides/vrm-face-tracking/">
   <meta property="og:title" content="WebカメラでVRMの顔・身体・指を動かす | V Lens">
-  <meta property="og:description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。">
+  <meta property="og:description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。">
   <meta property="og:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta property="og:image:alt" content="V Lens 0.1.69で内蔵VRMサンプル千駄ヶ谷 篠を表示した画面">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1250">
   <meta property="og:image:height" content="850">
   <meta name="twitter:title" content="WebカメラでVRMの顔・身体・指を動かす | V Lens">
-  <meta name="twitter:description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。">
+  <meta name="twitter:description" content="V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。">
   <meta name="twitter:image" content="https://vlens.studiojuh.com/screenshots/vrm-avatar.jpg">
   <meta name="twitter:image:alt" content="V Lens 0.1.69で内蔵VRMサンプル千駄ヶ谷 篠を表示した画面">
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -60,7 +60,7 @@
       "@id": "https://vlens.studiojuh.com/guides/vrm-face-tracking/#webpage",
       "url": "https://vlens.studiojuh.com/guides/vrm-face-tracking/",
       "name": "WebカメラでVRMの顔・身体・指を動かす | V Lens",
-      "description": "V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。",
+      "description": "V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。",
       "inLanguage": "ja",
       "isPartOf": {
         "@id": "https://vlens.studiojuh.com/#website"
@@ -97,7 +97,7 @@
       "@type": "TechArticle",
       "@id": "https://vlens.studiojuh.com/guides/vrm-face-tracking/#article",
       "headline": "WebカメラでVRMの顔・身体・指を動かす",
-      "description": "V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。",
+      "description": "V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。",
       "inLanguage": "ja",
       "mainEntityOfPage": {
         "@id": "https://vlens.studiojuh.com/guides/vrm-face-tracking/#webpage"
@@ -129,14 +129,14 @@
   <main class="wrap guide" id="main">
     <nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">V Lens</a></li><li aria-current="page">WebカメラでVRMの顔・身体・指を動かす</li></ol></nav>
     <h1>WebカメラでVRMの顔・身体・指を動かす</h1>
-    <p class="guide-lead">V LensでVRMの顔・身体・指をWebカメラに連動する手順。全身・手指追跡、手の誤検出を抑える設定、身体・手指のプレビューを案内します。</p>
+    <p class="guide-lead">V LensでVRMの顔・身体・指をWebカメラに連動する手順。3プリセットとCPU／GPUの選択、手の誤検出確認、身体・手指のプレビューを案内します。</p>
     <figure class="screenshot guide-shot">
       <a href="/screenshots/vrm-avatar.jpg"><picture><source type="image/webp" srcset="/screenshots/vrm-avatar-640.webp 640w, /screenshots/vrm-avatar-960.webp 960w, /screenshots/vrm-avatar-1250.webp 1250w" sizes="(max-width: 650px) calc(100vw - 32px), (max-width: 668px) calc(100vw - 48px), 620px"><img src="/screenshots/vrm-avatar.jpg" width="1250" height="850" alt="V Lens 0.1.69で内蔵VRMサンプル千駄ヶ谷 篠を表示した画面。3Dアバターと出力・表示設定が並ぶ" loading="eager" decoding="async" fetchpriority="high"></picture></a>
       <figcaption>V Lens 0.1.69で内蔵VRMサンプル「<a href="https://hub.vroid.com/characters/4593660874193246717/models/7956589129305596116">千駄ヶ谷 篠</a>」を表示。カメラ未使用の表示例です。モデル：pixiv（CC0）、VRM 1.0変換：Coatie（Koh-Tee）。</figcaption>
     </figure>
     <p>自分のVRMを用意する前に試す場合は、「ファイル」→「内蔵サンプル」→「千駄ヶ谷 篠（VRM）」から開けます。</p>
     <h2>VRMとWebカメラをつなぐ</h2>
-    <p>0.1.78では、PSD・VRMの右側「出力」タブから、表情選択の下にあるスイッチでカメラトラッキングを直接オン・オフできます。停止中・出力中ともすぐ反映して自動保存します。「カメラトラッキング設定…」からは詳細設定を開けます。従来の「設定」→「カメラトラッキング…」からも開けます。</p>
+    <p>0.1.79では、PSD・VRMの右側「出力」タブから、表情選択の下にあるスイッチでカメラトラッキングを直接オン・オフできます。停止中・出力中ともすぐ反映して自動保存します。「カメラトラッキング設定…」からは詳細設定を開けます。従来の「設定」→「カメラトラッキング…」からも開けます。</p>
     <p>設定画面の変更はその場で反映され、「適用して保存」を押す必要はありません。設定画面を閉じるときとアプリ終了時に、反映済みの設定を保存します。変更に失敗した場合は実際の設定に表示を戻してエラーを案内し、保存に失敗した場合は設定画面を開いたまま再試行できます。</p>
     <ol>
       <li>「モデルを開く…」からVRM 0.xまたはVRM 1.0のファイルを読み込みます。</li>
@@ -145,7 +145,7 @@
     </ol>
     <h2 id="live-controls">出力中にアバターと追跡を切り替える</h2>
     <p>0.1.73では、PSD・VRMの出力を続けながらモデルや内蔵サンプルを切り替えられます。設定済みPSDも保存した設定JSONなどから読み込めます。出力の接続と形式は維持され、準備に失敗した場合は元の素材を続けます。<a href="/guides/psd-lip-sync/#switch-during-output">PSDの切り替えと割り当ての条件</a></p>
-    <p>「設定」→「カメラトラッキング…」では、出力中も連動のトグル、口パクの入力元、左右・上下・首かしげの角度上限、「VRMの身体」のモードと全身モードの「身体の推論品質」をその場で変更できます。オンにする準備に失敗した場合は元の設定を続けます。「カメラのみ」から連動をオフにするときは、音声の口パクに必要な入力を先に準備します。カメラ、動きの対応、手の追跡、CPU／GPUの変更は出力を停止して行います。</p>
+    <p>「設定」→「カメラトラッキング…」では、出力中も連動のトグル、口パクの入力元、左右・上下・首かしげの角度上限、「VRMの身体」のモードと全身モードの「プリセット」をその場で変更できます。オンにする準備に失敗した場合は元の設定を続けます。「カメラのみ」から連動をオフにするときは、音声の口パクに必要な入力を先に準備します。カメラ、動きの対応、CPU／GPUの変更は出力を停止して行います。</p>
     <h2>顔の向き、視線、口パクを調整する</h2>
     <p>VRMの顔の向きや目線、まばたきは、モデルが対応するボーンや表情に反映されます。鏡に映るように動かしたい場合は、カメラトラッキング設定の「動きの対応」で「鏡」を選びます。</p>
     <p>口パクは「音声のみ」から「カメラのみ」まで5段階で配分できます。マイクで口を動かしながら、まばたきや頭の動きだけWebカメラで合わせることもできます。首と肩を一緒に動かしたい場合は「顔＋上半身の自然な連動」を選べます。</p>
@@ -157,32 +157,29 @@
       <li><strong>全身・手指トラッキング</strong> — 身体の向き、腕・脚、手のひら・手首と左右の指一本ずつを追跡します。対応するボーンのあるモデルが必要です。</li>
     </ul>
     <p>全身を動かすときは頭から足先まで画角に入れ、手は指が見える大きさに映してください。全身モードでは、カメラが対応していれば720pに近い入力を使い、手周辺を切り出して指を検出します。頭の動きは身体・手指の処理と分けて反映します。カメラやPCの性能、照明、手の映る大きさによって追跡の速さと精度は変わります。</p>
-    <h2 id="body-quality">身体の推論品質を選ぶ</h2>
-    <p>0.1.78では、全身モードの「身体の推論品質」で、身体モデルと負荷のバランスを選べます。</p>
+    <h2 id="body-quality">プリセットを選ぶ</h2>
+    <p>0.1.79では、全身モードの品質・負荷を「プリセット」と「処理先」の2項目にまとめています。身体・手指のモデルと手の誤検出確認をプリセットで選び、個別の品質・安定性セレクターは使いません。</p>
     <ul>
-      <li><strong>軽量（初期値）</strong> — CPUではPose Landmarker Liteを使います。GPU設定では既存の軽量ONNXモデルを使い、負荷と反応の速さを優先します。</li>
-      <li><strong>標準</strong> — CPUでPose Landmarker Fullを使います。LiteとHeavyの中間のモデルです。</li>
-      <li><strong>精度優先</strong> — CPUでPose Landmarker Heavyを使います。身体の推定精度を優先し、負荷の増加を許容する選択です。</li>
+      <li><strong>LITE</strong> — CPUでは身体にPose Lite、手指にHand Liteを使います。手の追加確認を最小限にし、負荷と反応の速さを優先します。</li>
+      <li><strong>バランス（初期値）</strong> — CPUでは身体にPose Lite、手指にHand Fullを使います。新規・再検出や急変した手を2回の推論で確認し、手指の細かさと反応を両立します。</li>
+      <li><strong>ヘヴィ</strong> — 身体にCPUのPose Heavy、手指にHand Fullを使います。身体の推定を優先する選択で、手の確認はバランスと同じ2回です。</li>
     </ul>
-    <p>以前の設定ファイルでは軽量を使用します。標準・精度優先は、処理方式がGPUでも身体をCPUのFull／Heavyで処理します。GPUが利用可能なら、手は引き続きGPUで処理できます。この設定は身体モデルだけを切り替え、顔・指のモデルは変更しません。顔のみ・自然な連動では身体モデルを使いません。</p>
-    <p>品質は停止中・出力中とも変更できます。追跡とプレビューを新しい品質で準備し直し、映像出力の接続と正面合わせの基準を保ちます。準備に失敗した場合は元の品質で追跡の再開を試みます。設定画面を閉じるときとアプリ終了時に保存します。負荷や反応の違いはPCや動きによって変わるため、プレビューで確認してください。</p>
-    <h2 id="compute-device">身体・手の処理をGPUへ分散する</h2>
-    <p>全身モードの「身体・手の処理」で「GPUでCPU負荷を軽減」を選べます。初期値はCPUです。出力を停止してから選ぶと、その場で反映されます。プレビューにも選択した設定が適用され、実際にCPU／GPUのどちらで処理しているか表示します。GPUが利用できない場合や処理に失敗した場合は、CPUで追跡を続けます。</p>
-    <p>顔の追跡は引き続きCPUで独立して処理します。軽量のGPU身体モデルはCPUのLiteとは異なるONNXモデルなので、動きが完全に一致するとは限りません。標準・精度優先でGPUを選ぶ場合は、身体をCPU、手をGPUへ分けます。GPUの性能やドライバー、OBSやゲームとの同時使用によって効果は変わります。</p>
+    <p>プリセットは停止中・出力中とも変更できます。全身モードの追跡とプレビューを準備し直し、映像出力の接続と正面合わせの基準を保ちます。準備に失敗した場合は元のプリセットで再開を試みます。設定画面を閉じるときとアプリ終了時に保存します。顔のみ・自然な連動では身体・手指モデルを使いません。</p>
+    <p>以前の設定はプリセットへ移行します。従来CPUで使っていた手指Fullの重みは同じです。旧GPUの手指Liteとバランス確認を組み合わせた設定は、新しいバランスでは手指Fullになります。モデルの規模だけで実カメラの精度向上を保証するものではないため、プレビューで確認してください。</p>
+    <p>中間の身体Full（展開後約9.4 MB）を同梱対象から除外しました。手指Fullなどの追加もあるため、0.1.78比でのモデル総容量の削減量ではありません。圧縮後のインストーラーの削減量でもありません。身体Fullが精度上無意味と判断したものではなく、配布容量と設定の組み合わせを減らす整理です。</p>
+    <h2 id="compute-device">CPU／GPUの処理先を選ぶ</h2>
+    <p>「処理先」はプリセットと独立してCPU／GPUを選べます。初期値はCPUです。出力を停止してから選ぶと、その場で反映されます。プレビューにも選択した設定を適用し、実際の処理先とモデルを表示します。</p>
+    <p>GPUが利用可能な場合、LITEとバランスは身体を軽量ONNX、手指をそれぞれLite／FullのONNXでGPU処理します。ヘヴィは身体をCPU Heavy、手指をGPU Fullで処理します。軽量GPUの身体モデルはCPU Liteとは異なるモデルです。手指の重みはLite／FullごとにCPU・GPUで照合していますが、処理経路が異なるため結果の完全一致は保証しません。</p>
+    <p>顔の追跡は全プリセットでCPUを使い、身体・手指とは独立して反映します。GPUの初期化や推論に失敗した場合は、身体と手指それぞれCPUへ戻して続けます。身体はCPU Lite、手指は選択したプリセットと同じLite／Fullを使います。GPUの性能やドライバー、OBSやゲームとの同時使用によって効果は変わります。</p>
     <h2 id="hand-stability">手の誤検出を抑える</h2>
-    <p>全身モードの「手の追跡」で、反応の速さと検出の安定性を選べます。出力を停止してから選ぶと、その場で反映されます。</p>
-    <ul>
-      <li><strong>反応優先</strong> — 追加の確認待ちを入れず、手の動きを素早く反映します。</li>
-      <li><strong>バランス（初期値）</strong> — 連続する2フレームで同じ手と判断してから反映します。30 FPS入力で確認待ちは約33 msです。</li>
-      <li><strong>安定優先</strong> — 連続する4フレームで確認します。30 FPS入力で約100 msの確認待ちを許容し、短い誤検出を抑えます。</li>
-    </ul>
-    <p>待ち時間は手を新たに検出したときや、位置・向きが急変したときの追加分の目安です。継続して追跡できている手に、毎回同じ待ち時間を加える設定ではありません。顔の追跡には影響しません。</p>
+    <p>手の確認設定はプリセットに含まれます。LITEは追加確認を最小限にし、バランスとヘヴィは互換性のある2回の推論で確認します。30 FPS推論で追加確認は約33 msが目安です。ヘヴィも4回確認にはせず、反応の遅れを抑えています。</p>
+    <p>待ち時間は、新しい手・再検出した手・位置や向きが急変した推定を確認するときの追加分です。継続して追跡できている手に毎回同じ待ち時間を加えるものではなく、顔・頭の追従には使いません。推論間隔が長い場合、確認時間も長くなります。手全体を画角に収め、指が見える明るさと大きさを保ってください。隠れた指や奥行きを確実に復元できる設定ではありません。</p>
     <h2>肘や手が隠れたときの動き</h2>
     <p>肩と手首が見えて肘が隠れた場合は、手首の動きや手のひらの向きから肘を補います。位置や回転が曖昧な腕は、腕を少し下げたAポーズに近い姿勢へ重みを置きます。前腕のひねりと手首の傾きを分け、急な反転や無理な曲がりを抑えます。身体を横切る腕は、上腕・前腕が胴体の手前を通るように肩の角度を制限します。胴体を近似した制限のため、モデルの形状や厚い衣装では接触が残る場合があります。</p>
     <p>追跡が短く途切れたときは直前の姿勢を保ち、見失った状態が続けば腕や指を楽な姿勢へ滑らかに戻します。1台のカメラで見えない関節の位置や回転を正確に再現できるものではなく、重なりや画角外では誤差が残ります。</p>
     <h2 id="preview">顔・身体・指の検出状態を確認する</h2>
     <p>「プレビュー開始」→「モザイク映像＋ランドマーク」で検出状態を確認します。全身モードでは、顔の点・線に加えて身体の骨格を青、左手の関節を橙、右手を紫で表示します。色の左右はカメラに映る人を基準にしています。顔や身体が見えず、手だけを検出した場合も表示します。</p>
-    <p>プレビュー中にカメラ・身体モード・身体の推論品質・手の追跡・処理方式を変更すると、新しい設定でプレビューを再開します。角度上限の変更でプレビューを止める必要はありません。カメラ・動きの対応・手の追跡・処理方式を変えるときは、出力を停止してください。</p>
+    <p>プレビュー中にカメラ・身体モード・プリセット・処理先を変更すると、新しい設定でプレビューを再開します。角度上限の変更でプレビューを止める必要はありません。カメラ・動きの対応・処理先を変えるときは、出力を停止してください。</p>
     <p>「顔の3D」は顔専用の立体表示です。未加工のカメラ映像は表示せず、モザイク映像では同じカメラフレームの検出結果を重ねます。</p>
     <h2>顔を見つけられないとき・正面がずれるとき</h2>
     <p>顔全体がカメラの画角に入るように調整し、ランドマークを確認します。顔を検出した状態で「現在の向きを基準にする」を押すと、楽な姿勢を正面として取り直せます。出力中はモニターの「正面合わせ」も使えます。頭を向けたときの動きが大きすぎる場合は、設定画面で角度上限を下げます。出力中も変更できます。</p>

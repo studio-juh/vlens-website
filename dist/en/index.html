@@ -80,10 +80,10 @@
       "url": "https://vlens.studiojuh.com/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Windows 11 (x64)",
-      "softwareVersion": "0.1.78",
+      "softwareVersion": "0.1.79",
       "inLanguage": "ja",
       "description": "V Lens is a Windows 11 virtual camera for PSD and VRM avatars. Add lip sync, webcam face tracking and body and finger tracking, then send video to OBS or calls.",
-      "downloadUrl": "https://github.com/studio-juh/vlens-website/releases/download/v0.1.78/V-Lens_0.1.78_x64-setup.exe",
+      "downloadUrl": "https://github.com/studio-juh/vlens-website/releases/download/v0.1.79/V-Lens_0.1.79_x64-setup.exe",
       "installUrl": "https://vlens.studiojuh.com/en/#download",
       "image": {
         "@type": "ImageObject",
@@ -150,7 +150,7 @@
           <h3>Face tracking with a webcam</h3>
           <p>VRM 0.x and 1.0 are supported. Follow head direction, blinks and gaze with your webcam. You can also load GLB and FBX models.</p>
           <h3>Body and individual fingers</h3>
-          <p>Full-body mode follows your body, palms, wrists and each finger. Choose the stability setting if you see false hand detections. Hidden elbows are estimated. When arm tracking is lost, the arms ease back to a relaxed pose. <a href="/en/guides/vrm-face-tracking/">Setup and limitations</a></p>
+          <p>Full-body mode follows your body, palms, wrists and each finger. Choose LITE, Balanced or Heavy, and CPU or GPU processing. Hidden elbows are estimated. When arm tracking is lost, the arms ease back to a relaxed pose. <a href="/en/guides/vrm-face-tracking/">Setup and limitations</a></p>
         </div>
       </div>
       <div class="feature-main feature-vrm">
@@ -206,7 +206,7 @@
         <details><summary>Which operating systems are supported?</summary><p>Windows 11 (x64). Registering the virtual camera requires administrator approval.</p></details>
         <details><summary>Can I try it without my own avatar?</summary><p>Yes. Built-in PSD samples let you try lip sync, blinking and expression switching. There is also a built-in VRM sample. To use your own avatar, load a layered PSD or a supported 3D model.</p></details>
         <details><summary>Do I need a webcam?</summary><p>Audio lip sync, automatic blinking, and image or video output work without a webcam. Webcam tracking is needed to follow your face, gaze, body or hands.</p></details>
-        <details><summary>What if a hand is detected incorrectly?</summary><p>In full-body mode, choose Balanced or Stability first under Hand tracking. These settings confirm detections across several frames; Stability first allows a little more confirmation time. <a href="/en/guides/vrm-face-tracking/#hand-stability">Compare the settings</a>.</p></details>
+        <details><summary>What if a hand is detected incorrectly?</summary><p>In full-body mode, choose the Balanced or Heavy preset to confirm new or reacquired hands and sudden changes across two compatible inferences. This adds about 33 ms of confirmation at 30 FPS inference. Adjust lighting and keep the hands large enough in view. <a href="/en/guides/vrm-face-tracking/#hand-stability">Hand confirmation and limitations</a>.</p></details>
         <details><summary>Will every model move the same way?</summary><p>Expressions and movement depend on the bones and morphs included in your model.</p></details>
         <details><summary>Does output include audio?</summary><p>Output is video only. Set up the audio for your stream in OBS or your calling app.</p></details>
         <details><summary>Is the app interface in English?</summary><p>The app interface and screenshots are currently in Japanese. The English guides include Japanese menu labels to help you find the controls.</p></details>
@@ -215,10 +215,10 @@
 
     <section class="wrap download" id="download" aria-labelledby="download-title">
       <h2 id="download-title">Download</h2>
-      <p>V Lens 0.1.78 · NSIS installer for Windows 11 (x64)</p>
+      <p>V Lens 0.1.79 · NSIS installer for Windows 11 (x64)</p>
       <div class="download-actions">
-        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.78/V-Lens_0.1.78_x64-setup.exe">Download installer</a>
-        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.78">Release notes</a>
+        <a class="button" href="https://github.com/studio-juh/vlens-website/releases/download/v0.1.79/V-Lens_0.1.79_x64-setup.exe">Download installer</a>
+        <a class="release-notes" href="https://github.com/studio-juh/vlens-website/releases/tag/v0.1.79">Release notes</a>
       </div>
       <p class="download-notice">The app interface is currently in Japanese. The installer is unsigned, so Windows may show a security warning when you open it.</p>
       <details class="install-help" id="windows-protection">
