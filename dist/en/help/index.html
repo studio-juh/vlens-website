@@ -180,6 +180,10 @@
       <p>Full-body quality and load are grouped into Preset (<span lang="ja">プリセット</span>) and Processing device (<span lang="ja">処理先</span>). Light (lower load; <span lang="ja">ライト（軽さ優先）</span>) uses lightweight body and hand models; Balanced (recommended; <span lang="ja">バランス（おすすめ）</span>), the default, uses Body Lite and Hand Full; Heavy (prioritize body accuracy; <span lang="ja">ヘヴィ（身体の精度優先）</span>) uses Body Heavy and Hand Full. Balanced and Heavy use the same two-inference hand confirmation. With GPU selected, Heavy still runs the body on the CPU while the hands can use the GPU. <a href="/en/guides/vrm-face-tracking/#body-quality">Choose a preset and processing device</a></p>
       <div class="faq-list">
         <details>
+          <summary>I want a flatter 2D look with fewer shadows</summary>
+          <p>In version 0.1.85 or later, open Display settings (<span lang="ja">表示設定</span>) → Material (<span lang="ja">材質</span>) → Cel look (2D style; <span lang="ja">セルルック（2D調）</span>). This reduces lighting-based shadows and rim lighting, and can be switched during output. Shadows and folds painted into textures remain visible. You can also switch back to lilToon (built-in; <span lang="ja">lilToon（内蔵）</span>) or an existing material. <a href="/en/guides/vrm-face-tracking/#cel-look">2D appearance settings and limitations</a></p>
+        </details>
+        <details>
           <summary>A smile looks unnatural or lips purse at rest</summary>
           <p>Version 0.1.84 refines smile shapes and competing mouth movements, reducing unintended pursing even before a neutral reference is registered. Adjust mouth strength and the response threshold in the Expression tab (<span lang="ja">表情</span>). If a personal bias remains, start output and camera tracking, face forward with a relaxed expression, then click Register neutral (<span lang="ja">無表情を登録</span>). Automatic mode returns to neutral when the face is lost instead of restoring a previously selected fixed expression. <a href="/en/guides/vrm-face-tracking/#expression-overdrive">Expression adjustment steps</a></p>
         </details>
