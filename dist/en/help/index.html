@@ -189,7 +189,7 @@
         </details>
         <details>
           <summary>Face movement drops out or I want to inspect tracking status</summary>
-          <p>The main window and preview show input FPS, face-inference FPS and milliseconds, and face-result age on one line. Hover over a state such as Interpolating (<span lang="ja">補間中</span>) for the detailed reason. Brief gaps are bridged within 100–250 ms, then the head and expressions return to normal when the result expires. Old results cannot have their deadline extended indefinitely. <a href="/en/guides/vrm-face-tracking/#tracking-status">Diagnostics and continuity limits</a></p>
+          <p>The main window and preview show input FPS, face-inference FPS and milliseconds, and face-result age on one line. Version 0.1.87 reduces vertical spacing in the main-window statistics and searches the full image again when tracking loses a frame. Hover over a state such as Interpolating (<span lang="ja">補間中</span>) for the reason and recovery attempt/adoption counts. Brief gaps are bridged within 100–250 ms, then the head and expressions return to normal when the result expires. Rejected results never extend an old result’s deadline. <a href="/en/guides/vrm-face-tracking/#face-recovery">Face recovery</a> · <a href="/en/guides/vrm-face-tracking/#tracking-status">Diagnostics and continuity limits</a></p>
         </details>
         <details>
           <summary>I want a flatter 2D look with fewer shadows</summary>
