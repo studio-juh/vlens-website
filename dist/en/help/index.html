@@ -180,6 +180,10 @@
       <p>Full-body quality and load are grouped into Preset (<span lang="ja">プリセット</span>) and Processing device (<span lang="ja">処理先</span>). Light (lower load; <span lang="ja">ライト（軽さ優先）</span>) uses lightweight body and hand models; Balanced (recommended; <span lang="ja">バランス（おすすめ）</span>), the default, uses Body Lite and Hand Full; Heavy (prioritize body accuracy; <span lang="ja">ヘヴィ（身体の精度優先）</span>) uses Body Heavy and Hand Full. Balanced and Heavy use the same two-inference hand confirmation. With GPU selected, Heavy still runs the body on the CPU while the hands can use the GPU. <a href="/en/guides/vrm-face-tracking/#body-quality">Choose a preset and processing device</a></p>
       <div class="faq-list">
         <details>
+          <summary>A smile looks unnatural or lips purse at rest</summary>
+          <p>Version 0.1.84 refines smile shapes and competing mouth movements, reducing unintended pursing even before a neutral reference is registered. Adjust mouth strength and the response threshold in the Expression tab (<span lang="ja">表情</span>). If a personal bias remains, start output and camera tracking, face forward with a relaxed expression, then click Register neutral (<span lang="ja">無表情を登録</span>). Automatic mode returns to neutral when the face is lost instead of restoring a previously selected fixed expression. <a href="/en/guides/vrm-face-tracking/#expression-overdrive">Expression adjustment steps</a></p>
+        </details>
+        <details>
           <summary>My face is not detected, or the forward direction is wrong</summary>
           <p>Keep your whole face in the camera frame and check the preview landmarks. Once your face is detected, face forward in a relaxed position and click Use current orientation as reference (現在の向きを基準にする). Version 0.1.81 checks facial geometry and motion to reduce unstable estimates when a hand or another object covers the face. Normal continuous motion has no added confirmation wait.</p>
         </details>
