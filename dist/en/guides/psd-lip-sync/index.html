@@ -141,9 +141,12 @@
       <li>Under Audio / Lip sync (<span lang="ja">音声・リップシンク</span>), select Microphone (<span lang="ja">マイク</span>) and your usual input device.</li>
       <li>Click Start output (<span lang="ja">出力を開始</span>) and speak. Watch the output monitor and adjust Mouth opening volume (<span lang="ja">口を開く音量</span>) to set when the mouth opens.</li>
     </ol>
-    <h2>Animate your own PSD avatar</h2>
+    <h2 id="psd-setup">Animate your own PSD avatar</h2>
     <p>Prepare an 8-bit RGB PSD with separate layers for mouth and eye variations. Load it with Open PSD… (<span lang="ja">PSDを開く…</span>), select a mouth shape or eye state, then assign the matching layer.</p>
     <p>Choose Three mouth states (<span lang="ja">3段階</span>) for closed, half-open and open shapes, or Japanese vowels (vowel estimation) (<span lang="ja">あいうえお（母音推定）</span>) for separate a, i, u, e and o shapes. Assign open and closed eye layers to enable automatic blinking. Expression presets let you switch to a smile or other expression with shortcuts during output.</p>
+    <p>The layer list shows visible layers in white and hidden layers in gray. Folder icons indicate whether a folder is expanded or collapsed. If the current expression is missing mouth assignments, the message above Start output (<span lang="ja">出力を開始</span>) lists the missing shapes. Open PSD layer settings… (<span lang="ja">PSDのレイヤー設定…</span>) and assign a closed mouth plus an open mouth or at least one vowel.</p>
+    <p>Changes are saved automatically on this PC. To keep a separate copy, select Save PSD settings to file… (<span lang="ja">PSD設定をファイルに保存…</span>) at the bottom right of the PSD editor and choose where to save the <code>.vcam.json</code> file. Open it through File (<span lang="ja">ファイル</span>) → Load PSD settings… (<span lang="ja">PSD設定を読み込む…</span>). Copy the original PSD along with the settings file when moving to another PC.</p>
+    <p>In the main output monitor, drag a zoomed-in PSD all the way to its edges. Zooming out keeps the position within the new viewable range.</p>
     <h2 id="psd-compatibility">Supported PSD formats and features</h2>
     <p>V Lens opens 8-bit RGB PSD v1 files using uncompressed or PackBits RLE data. Version 0.1.88 improves import from Photoshop and CLIP STUDIO and renders blend modes such as Multiply, Screen and Linear Dodge (Add), clipping, and raster masks on layers and folders. To display a clipped layer, its base layer in the same folder must be visible.</p>
     <p>When blend modes, clipping, or folder masks affect the appearance of the mouth, V Lens switches between composited mouth shapes to preserve their appearance. Volume-based stretching of the mouth is skipped in this case.</p>
@@ -153,7 +156,6 @@
     <p>Use a PSD whose mouth and eye layers have been assigned. V Lens can reuse the most recently configured PSD’s assignments when its file and layer structure match. Load other configured PSDs through their saved settings JSON. Stop output to assign the layers of a PSD you are using for the first time.</p>
     <h2>If the mouth does not respond well</h2>
     <p>Check the audio meter to confirm that sound is reaching the app. For quiet speech or vocals over background music, try the Quiet voice / vocals with BGM (<span lang="ja">小声・BGMありボーカル</span>) preset. If vowel detection has trouble with your voice, open Settings (<span lang="ja">設定</span>) → Adjust vowel estimation… (<span lang="ja">母音推定を調整…</span>) and record a, i, u, e and o in your normal voice.</p>
-    <p>To move the assignments to another PC, use File (<span lang="ja">ファイル</span>) → Save PSD settings… (<span lang="ja">PSD設定を保存…</span>) to save a JSON file. Copy the original PSD along with it.</p>
     <section class="guide-related" aria-labelledby="related-title">
       <h2 id="related-title">Related guides</h2>
       <ul class="guide-links">
